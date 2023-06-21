@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Button } from "react-bootstrap";
 
-const Button = () => {
+const Btn = ({ button_name }) => {
   return (
-    <div>Button</div>
-  )
-}
+    <div>
+      <Button variant="outline-primary">{button_name}</Button>
+    </div>
+  );
+};
 
-export default Button
+export default Btn;
