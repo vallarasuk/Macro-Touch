@@ -1,10 +1,14 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import "./assect_styles.css";
 
-const Btn = ({ button_name }) => {
+const Btn = ({ button_name, className }) => {
   return (
     <div>
-      <Button variant="outline-primary">{button_name}</Button>
+      <button
+        className={`${className} px-4 fw-bold text-capatilize button_style rounded-4`}
+      >
+        {button_name}
+      </button>
     </div>
   );
 };
