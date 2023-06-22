@@ -2,12 +2,15 @@ import React from "react";
 import { BsArrowRight, BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Btn from "../Assects/Button";
 import think_image from "../Images/thinkimage.png";
+import profile from "../Images/gg_profile.png";
+import EndCard from "./EndCard";
 
 const Content = () => {
   return (
     <div>
       {/* how it section */}
-      <h1 className="mt-5 text-center p-md-5">How it Works</h1>
+   <div className="how_section">
+   <h1 className="mt-5 text-center p-md-5">How it Works</h1>
       <div className="row justify-content-evenly">
         <div className="col-3 text-center d-flex align-items-center">
           <div>
@@ -39,9 +42,10 @@ const Content = () => {
       <div className="text-center my-5">
         <Btn button_name="Get stared" />
       </div>
+   </div>
 
       {/* why to choose us */}
-      <div>
+      <div className="why_section">
         <h1 className="my-5 text-center p-md-5">Why to choose us</h1>
 
         <div className="row align-items-center">
@@ -78,44 +82,81 @@ const Content = () => {
       </div>
 
       {/* listen to other experiences */}
-      <div>
-        <h1 className="my-5 text-center p-md-5">Listen to others experience</h1>
-        <div
-          id="carouselExampleRide"
-          className="carousel slide my-5"
-          data-bs-ride="true"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={think_image} className="d-block" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={think_image} className="d-block" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={think_image} className="d-block" alt="..." />
+      <div className="container my-5 listen_section ">
+        <div className="row justify-content-center mt-5 align-item-center">
+          <div className="col-10">
+            <div>
+              <h1 className="text-center">
+                Listen to others' experiences
+              </h1>
+              <div
+                id="carouselExampleRide"
+                className="carousel slide my-5 text-center"
+                data-bs-ride="true"
+              >
+                <div className="carousel-inner text-center">
+                  <div className="carousel-item active row">
+                    <div className="d-flex justify-content-center my-4">
+                      <img src={profile} className="d-block" alt="..." />
+                      <br />
+                    </div>
+                    <h4 className="fw-bold">John Doe</h4>
+                    <p className="text-center col-8 offset-2">
+                      "Before MacroTouch, I struggle to understand my bank
+                      statement. Now, with automatic categorization and a clear
+                      summary, I recommend it to anyone seeking financial
+                      clarity."
+                    </p>
+                  </div>
+                  <div className="carousel-item row">
+                    <div className="d-flex justify-content-center my-4">
+                      <img src={profile} className="d-block" alt="..." />
+                    </div>
+                    <h4 className="fw-bold">John Doe</h4>
+                    <p className="text-center col-8 offset-2">
+                      "Before MacroTouch, I struggle to understand my bank
+                      statement. Now, with automatic categorization and a clear
+                      summary, I recommend it to anyone seeking financial
+                      clarity."
+                    </p>
+                  </div>
+                  <div className="carousel-item row">
+                    <div className="d-flex justify-content-center my-4">
+                      <img src={profile} className="d-block" alt="..." />
+                    </div> <h4 className="fw-bold">John Doe</h4>
+                    <p className="text-center  col-8 offset-2">
+                      "Before MacroTouch, I struggle to understand my bank
+                      statement. Now, with automatic categorization and a clear
+                      summary, I recommend it to anyone seeking financial
+                      clarity."
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  className="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleRide"
+                  data-bs-slide="prev"
+                >
+                  <BsChevronLeft size={34} className="carousel-control-icon" />
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                  className="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleRide"
+                  data-bs-slide="next"
+                >
+                  <BsChevronRight size={34} className="carousel-control-icon" />
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
           </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleRide"
-            data-bs-slide="prev"
-          >
-            <BsChevronLeft size={34} className="carousel-control-icon" />
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleRide"
-            data-bs-slide="next"
-          >
-            <BsChevronRight size={34} className="carousel-control-icon" />
-            <span className="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
+      <EndCard/>
     </div>
   );
 };

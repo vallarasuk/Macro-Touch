@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 const SocialLinks = () => {
   return (
-    <div>SocialLinks</div>
-  )
-}
+    <div>
+      <FaInstagram />
+      <FaFacebook />
+      <FaTwitter />
+    </div>
+  );
+};
 
-export default SocialLinks
+export default SocialLinks;

@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="md">
         <Navbar.Brand href="#home" className="d-flex align-items-center">
           <Logo logo_icon={logo_images} />
           <CompanyName name="Macro Touch" />
