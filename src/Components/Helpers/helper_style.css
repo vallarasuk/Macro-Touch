@@ -23,3 +23,13 @@
 .custom_color {
   color: #1B0069;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: black !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: black !important;
+}

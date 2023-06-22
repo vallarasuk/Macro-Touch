@@ -1,5 +1,5 @@
 import React from "react";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Btn from "../Assects/Button";
 import think_image from "../Images/thinkimage.png";
 
@@ -80,6 +80,41 @@ const Content = () => {
       {/* listen to other experiences */}
       <div>
         <h1 className="my-5 text-center p-md-5">Listen to others experience</h1>
+        <div
+          id="carouselExampleRide"
+          className="carousel slide my-5"
+          data-bs-ride="true"
+        >
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src={think_image} className="d-block" alt="..." />
+            </div>
+            <div className="carousel-item">
+              <img src={think_image} className="d-block" alt="..." />
+            </div>
+            <div className="carousel-item">
+              <img src={think_image} className="d-block" alt="..." />
+            </div>
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleRide"
+            data-bs-slide="prev"
+          >
+            <BsChevronLeft size={34} className="carousel-control-icon" />
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleRide"
+            data-bs-slide="next"
+          >
+            <BsChevronRight size={34} className="carousel-control-icon" />
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </div>
   );
