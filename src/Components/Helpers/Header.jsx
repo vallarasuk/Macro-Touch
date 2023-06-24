@@ -7,14 +7,14 @@ import Footer from "./Footer";
 
 const Header = () => {
   return (
-    <div>
-      <div className="custom_bg">
+    <>
+      <div className="home_section">
         <NavBar />
         <Home />
       </div>
       <Content />
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -23,13 +23,20 @@ const Footer = () => {
               <h3>Quick Links</h3>
               <ul className="list-unstyled my-4">
                 <li>
-                  <a href="#/" className="text-decoration-none"> Home</a>
+                  <a href="#/" className="text-decoration-none">
+                    {" "}
+                    Home
+                  </a>
                 </li>
                 <li>
-                  <a href="#/" className="text-decoration-none">Testimonials</a>
+                  <a href="#/" className="text-decoration-none">
+                    Testimonials
+                  </a>
                 </li>
                 <li>
-                  <a href="#/" className="text-decoration-none">Pricing</a>
+                  <a href="#/" className="text-decoration-none">
+                    Pricing
+                  </a>
                 </li>
               </ul>
             </div>
@@ -37,13 +44,20 @@ const Footer = () => {
               <h3>Reach Us</h3>
 
               <div className="">
-                <p><FaEnvelope className="icon me-2" /> support@macrotouch.com</p>
+                <p>
+                  <FaEnvelope className="icon me-2" /> support@macrotouch.com
+                </p>
               </div>
               <div className="">
-                <p><FaPhone className="icon me-2" /> +917604963319</p>
+                <p>
+                  <FaPhone className="icon me-2" /> +917604963319
+                </p>
               </div>
               <div className="">
-                <p><FaMapMarkerAlt className="icon me-2" /> 232, Salem Main Road, Chinnasalem</p>
+                <p>
+                  <FaMapMarkerAlt className="icon me-2" /> 232, Salem Main Road,
+                  Chinnasalem
+                </p>
               </div>
             </div>
           </div>
