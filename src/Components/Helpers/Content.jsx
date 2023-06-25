@@ -1,9 +1,14 @@
 import React from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import think_image from "../Images/thinkimage.png";
-import profile from "../Images/gg_profile.png";
+import profile from "../Images/Ellipse 4.png";
 import EndCard from "./EndCard";
 import HowSection from "./HowSection";
+import "./helper_style.css";
+import privacy from "../Images/material-symbols_shield-lock-outline.svg";
+import accuracy from "../Images/accuracy.svg";
+import timeline from "../Images/timeline.svg";
+import dataPrivacy from "../Images/data-privacy.svg";
 
 const Content = () => {
   return (
@@ -14,24 +19,30 @@ const Content = () => {
       {/* why to choose us */}
       <div className="why_section d-flex align-items-center">
         <div className="container">
-          <h1 className="my-5 text-center p-md-5">Why Choose Us</h1>
-
+          <h1 className="text-center mb-5">Why to Choose Us</h1>
           <div className="row align-items-center">
             <div className="col-lg-8">
               <div className="row">
-                <div className="col-md-6 my-5 px-3">
+                <div className="col-md-6 mb-5 px-3">
+                  <img src={privacy} alt="Privacy" />
                   <h2>Privacy</h2>
                   <p>Protect user data and ensure confidentiality.</p>
                 </div>
-                <div className="col-md-6 my-5 px-3">
+                <div className="col-md-6 mb-5 px-3">
+                  <img src={accuracy} alt="Privacy" />
+
                   <h2>Accuracy</h2>
                   <p>Improve data accuracy to enhance user experience.</p>
                 </div>
-                <div className="col-md-6 my-5 px-3">
+                <div className="col-md-6 mb-5 px-3">
+                  <img src={timeline} alt="Privacy" />
+
                   <h2>Timeliness</h2>
                   <p>No delay to improve user satisfaction and experience.</p>
                 </div>
-                <div className="col-md-6 my-5 px-3">
+                <div className="col-md-6 mb-5 px-3">
+                  <img src={dataPrivacy} alt="Privacy" />
+
                   <h2>Data Privacy</h2>
                   <p>Not storing your data, ensuring no data leakage.</p>
                 </div>
@@ -139,7 +150,6 @@ const Content = () => {
           </div>
         </div>
       </div>
-
       <EndCard />
     </>
   );

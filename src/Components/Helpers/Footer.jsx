@@ -4,27 +4,35 @@ import Logo from "../Assects/Logo";
 import CompanyName from "../Assects/CompanyName";
 import logo_image from "../Images/logomain.svg";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import FooterBar from "./FooterBar";
+import SocialLinks from "../Assects/SocialLinks";
 
 const Footer = () => {
   return (
-    <div className="my-5 footer_section">
+    <>
+    <div
+      className="px-5 mt-5 footer_section"
+      style={{
+        backgroundImage: "linear-gradient(67.3deg, #1B0069, #AD00FF)",
+      }}
+    >
       <div className="row">
-        <div className="col d-flex justify-content-between">
+        <div className="col d-flex justify-content-between p-5">
           <div className="info-section">
             <Navbar.Brand href="#home" className="d-flex align-items-center">
               <Logo logo_icon={logo_image} />
               <CompanyName name="Macro Touch" />
             </Navbar.Brand>
-            <h5 className="my-4">Feel the Veracity</h5>
+            <h5 className="my-4 px-2">Feel the Veracity</h5>
+            <SocialLinks/>
           </div>
 
           <div className="quick_link_section d-flex justify-content-around">
             <div className="mx-5">
-              <h3>Quick Links</h3>
+              <h3 className="mb-5">Quick Links</h3>
               <ul className="list-unstyled my-4">
                 <li>
                   <a href="#/" className="text-decoration-none">
-                    {" "}
                     Home
                   </a>
                 </li>
@@ -41,7 +49,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="mx-5">
-              <h3>Reach Us</h3>
+              <h3 className="mb-5">Reach Us</h3>
 
               <div className="">
                 <p>
@@ -55,8 +63,7 @@ const Footer = () => {
               </div>
               <div className="">
                 <p>
-                  <FaMapMarkerAlt className="icon me-2" /> 232, Salem Main Road,
-                  Chinnasalem
+                  <FaMapMarkerAlt className="icon me-2" /> 232, Salem Main Road, <br /> Chinnasalem
                 </p>
               </div>
             </div>
@@ -64,6 +71,8 @@ const Footer = () => {
         </div>
       </div>
     </div>
+      <FooterBar/>
+      </>
   );
 };
 

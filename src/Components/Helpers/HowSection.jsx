@@ -1,35 +1,51 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import Btn from "../Assects/Button";
-import "./helper_style.css";
+import upload from "../Images/cloud-upload.svg";
+import gear from "../Images/mdi_gear.svg";
+import download from "../Images/material-symbols_cloud-download-rounded.svg";
+import "./helper_style.css"; // Import the CSS file for custom styles
 
 const HowSection = () => {
+  useEffect(() => {
+    const animatedItems = document.querySelectorAll(".animated-item");
+    animatedItems.forEach((item, index) => {
+      item.style.animationDelay = `${index * 200}ms`;
+      item.classList.add("fade-in");
+    });
+  }, []);
+
   return (
-    <div className="how_section d-flex align-items-center">
+    <div className="how_section d-flex align-items-center" id="how_section">
       <div className="container">
-        <h1 className="mt-5 text-center p-md-5">How it Works</h1>
-        <div className="row justify-content-evenly">
+        <h1 className="text-center mb-5">How it Works</h1>
+        <div className="row justify-content-evenly align-items-center">
           <div className="col-md-4 text-center d-flex align-items-center">
-            <div>
-              <h1>Process Data</h1>
-              <p>Our system will process and analyze your transaction data.</p>
+            <div className="animated-item">
+              <img src={upload} alt="upload" className="animated-img" />
+              <h2>Process Data</h2>
+              <p className="p-2">
+                Our system will process and analyze your transaction data.
+              </p>
             </div>
-            <BsArrowRight size={64} />
+            <BsArrowRight className="arrow-icon" size={64} />
           </div>
           <div className="col-md-4 text-center d-flex align-items-center">
-            <div>
-              <h1>Let it Process</h1>
-              <p>
+            <div className="animated-item">
+              <img src={gear} alt="gear" className="animated-img" />
+              <h2>Let it Process</h2>
+              <p className="p-2">
                 Wait for a few seconds until we process the file and create the
                 summarized report for you.
               </p>
             </div>
-            <BsArrowRight size={64} />
+            <BsArrowRight className="arrow-icon" size={64} />
           </div>
           <div className="col-md-4 text-center d-flex align-items-center">
-            <div>
-              <h1>Download the file</h1>
-              <p>
+            <div className="animated-item">
+              <img src={download} alt="download" className="animated-img" />
+              <h2>Download the file</h2>
+              <p className="p-2">
                 Once your report is ready, download the report and <br />
                 <span className="custom_color fw-bold">Feel the veracity.</span>
               </p>

@@ -5,7 +5,7 @@ const Btn = ({ button_name, className }) => {
   return (
     <div>
       <button
-        className={`${className} px-4 fw-bold text-capatilize button_style rounded-4`}
+        className={`${className} px-4 fw-bold text-capitalize button_style`}
       >
         {button_name}
       </button>

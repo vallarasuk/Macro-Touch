@@ -1,5 +1,5 @@
 :root {
-    --btn-name: black;
+    --btn-name: #1B0069;;
     --btn-background: yellow;
     --company-second-name-color: yellow;
 }
@@ -11,6 +11,10 @@
     margin: 0 20px;
     padding: 10px 20px;
     text-transform: capitalize;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 8px;
+    
 }
 
 .second_name {

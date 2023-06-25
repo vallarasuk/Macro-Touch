@@ -14,7 +14,7 @@ const NavBar = () => {
   };
 
   return (
-    <div>
+    <div  className="container pt-3">
       <Navbar expand="md">
         <Navbar.Brand href="#home" className="d-flex align-items-center">
           <Logo logo_icon={logo_images} />
@@ -24,6 +24,7 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto fw-bold">
             <Nav.Link
+            style={{ color: 'white' }}
               href="#home"
               className={`mx-2 ${activeLink === "home" ? "active-link" : ""}`}
               onClick={() => handleLinkClick("home")}
@@ -32,6 +33,7 @@ const NavBar = () => {
             </Nav.Link>
             <Nav.Link
               href="#about"
+              style={{ color: 'white' }}
               className={`mx-2 ${activeLink === "about" ? "active-link" : ""}`}
               onClick={() => handleLinkClick("about")}
             >
@@ -39,6 +41,7 @@ const NavBar = () => {
             </Nav.Link>
             <Nav.Link
               href="#services"
+              style={{ color: 'white' }}
               className={`mx-2 ${
                 activeLink === "services" ? "active-link" : ""
               }`}

@@ -5,7 +5,7 @@ const CompanyName = ({ name }) => {
   return (
     <div className="mx-3 mt-1">
       <h4 className="fw-bold">
-        {parts[0]} <span className="second_name">{parts[1]}</span>
+       <span style={{ color: 'white' }}> {parts[0]}</span> <span className="second_name">{parts[1]}</span>
       </h4>
     </div>
   );
