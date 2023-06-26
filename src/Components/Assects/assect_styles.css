@@ -1,5 +1,6 @@
 :root {
-    --btn-name: #1B0069;;
+    --btn-name: #1B0069;
+    ;
     --btn-background: yellow;
     --company-second-name-color: yellow;
 }
@@ -14,9 +15,100 @@
     font-size: large;
     cursor: pointer;
     border-radius: 8px;
-    
+
 }
 
 .second_name {
     color: var(--company-second-name-color);
 }
+
+.register_section {
+    height: 100vh;
+    background: linear-gradient(67.3deg, #1B0069 -32.92%, #AD00FF 101.42%) !important;
+
+}
+
+.register_section h1 {
+    color: #FFF;
+    font-size: 48px;
+    font-family: Inter;
+    font-weight: 600;
+    line-height: 119.5%;
+}
+
+.register_section p {
+    color: #FFF;
+    font-size: 16px;
+}
+
+.input_btn {
+    border-radius: 51px;
+    background: #FFC231;
+    padding: 16px 80px !important;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.input_box {
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    padding: 15px;
+    width: 557px;
+    height: 85px;
+    flex-shrink: 0;
+}
+
+.center-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-input-class {
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    padding: 15px;
+    width: 557px;
+    height: 85px;
+    flex-shrink: 0;
+}
+
+.verify_section h1 {
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+}
+
+.verify_section p {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.verify_section {
+    height: 100vh;
+    background: linear-gradient(67.3deg, #1B0069 -32.92%, #AD00FF 101.42%) !important;
+}
+
+.verify_btn {
+    border-radius: 51px;
+    background: #ffc231;
+}
+
+.verify_layout {
+    display: flex;
+    justify-content: center;
+    /* Align the content horizontally at the center */
+    align-items: center;
+    /* Align the content vertically at the center */
+}
+
+.no-spin-button::-webkit-outer-spin-button,
+.no-spin-button::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
