@@ -112,3 +112,18 @@
     margin: 0;
 }
 
+.dropzone {
+    border: 2px dashed #999;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .dropzone.active {
+    border-color: #0088ff;
+  }
+  
+  .dropzone p {
+    margin: 0;
+  }
+  

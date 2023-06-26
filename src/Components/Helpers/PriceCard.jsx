@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card"; // Import the Card component
 import "./helper_style.css";
+import NavBarCommon from "./NavBarCommon.jsx";
 
 const PriceCard = () => {
   const cards = [
@@ -29,8 +30,8 @@ const PriceCard = () => {
 
   return (
     <div className="container">
+        <NavBarCommon />
       <h1 className="text-center my-3">The Credit Packs</h1>
-
       <div className="row mt-5 justify-content-evenly align-items-center">
         {cards.map((card, index) => (
           <div className="col-lg-4 col-md-6" key={index}>

@@ -1,9 +1,13 @@
 import React from 'react';
+import NavBarCommon from '../Helpers/NavBarCommon';
+import FileUpload from '../Helpers/FileUpload';
 
 const FileSection = () => {
   return (
-    <div>
-files section
+    <div className='container'>
+        <NavBarCommon/>
+        <FileUpload/>
+
     </div>
   )
 }
