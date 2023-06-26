@@ -2,7 +2,7 @@ import React from "react";
 import Btn from "../Assects/Button";
 import vector from "../Images/Vector.svg";
 
-const Card = ({ title, creditCount, price, color }) => {
+const Card = ({ title, creditCount, price, color,creditText }) => {
   return (
     <div
       className="card shadow d-flex flex-column justify-content-center align-items-center"
@@ -24,7 +24,7 @@ const Card = ({ title, creditCount, price, color }) => {
       <div className="card-body">
         <h5 className="fw-bold text-center my-2">{title}</h5>
         <p className="my-3">
-          The cost of one pack is just <br />
+          {creditText} <br />
           <span className="fw-bold price-color text-start d-inline-block my-1">
             {price}
           </span>
