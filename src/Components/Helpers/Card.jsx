@@ -1,39 +1,37 @@
 import React from "react";
+import Btn from "../Assects/Button";
+import vector from "../Images/Vector.svg";
 
-const Card = ({ title, image, content, className, topColor, bottomColor }) => {
-  const isLoading = false; // Set this to true when the card is in a loading state
-
+const Card = ({ title, creditCount, price, color }) => {
   return (
-    <div className="col-lg-4 col-md-6">
-      <div
-        className={`card ${className} ${isLoading ? "loading" : ""}`}
-        style={{
-          border: "none",
-          borderRadius: "12.179px",
-          position: "relative",
-        }}
-      >
-        {isLoading ? (
-          <div className="loading-spinner"></div>
-        ) : (
-          <>
-            <div className="card-img text-center">
-              <img src={image} alt="vector" className="p-5" />
-            </div>
-            <div className="card-body">
-              <h5 className="text-center">{title}</h5>
-              <p>{content}</p>
-            </div>
-          </>
-        )}
-        <div
-          className="custom-border-top"
-          style={{ background: topColor }}
-        ></div>
-        <div
-          className="custom-border-bottom"
-          style={{ background: bottomColor }}
-        ></div>
+    <div
+      className="card shadow d-flex flex-column justify-content-center align-items-center"
+      style={{
+        borderTop: `5px solid ${color}`,
+        borderBottom: `5px solid ${color}`,
+        borderLeft: "none",
+        borderRight: "none",
+        borderRadius: "14px",
+      }}
+    >
+      <div className="card-img text-center pt-4">
+        <img
+          className="vector_img shadow img-fluid"
+          src={vector}
+          alt="vector"
+        />
+      </div>
+      <div className="card-body">
+        <h5 className="fw-bold text-center my-2">{title}</h5>
+        <p className="my-3">
+          The cost of one pack is just <br />
+          <span className="fw-bold price-color text-start d-inline-block my-1">
+            {price}
+          </span>
+        </p>
+        <div className="buy_btn text-center my-4">
+          <Btn button_name="Buy" />
+        </div>
       </div>
     </div>
   );
