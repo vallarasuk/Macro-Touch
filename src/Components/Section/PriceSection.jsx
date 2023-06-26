@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import PriceCard from "../Helpers/PriceCard";
 
 const PriceSection = () => {
   return (
-    <div>PriceSection</div>
-  )
-}
+    <div>
+      <PriceCard />
+    </div>
+  );
+};
 
 export default PriceSection;
