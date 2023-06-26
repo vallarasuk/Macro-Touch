@@ -19,16 +19,16 @@
 
 .get_start_btn_name {
   display: flex;
-width: 284px;
-padding: 16px 32px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 8px;
-background: var( #FFC231);
-font-size: 20px;
-font-weight: 500;
-color: #1B0069;
+  width: 284px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(#FFC231);
+  font-size: 20px;
+  font-weight: 500;
+  color: #1B0069;
 }
 
 .custom_color {
@@ -91,67 +91,68 @@ ul>li {
   background: linear-gradient(67.3deg, #1B0069 -32.92%, #AD00FF 101.42%) !important;
 }
 
-.how_section{
-height: 100vh;
+.how_section {
+  height: 100vh;
 }
 
 
 
-.why_section h2{
+.why_section h2 {
   color: var(--white, #FFF);
-text-align: start;
-font-size: 28px;
-font-family: Inter;
-font-weight: 700;
-line-height: 119.5%;
+  text-align: start;
+  font-size: 28px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 119.5%;
 }
 
-.why_section p{
+.why_section p {
   color: #FFF;
-font-size: 16px;
-font-family: Inter;
-line-height: 150%;
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 150%;
 }
 
-.why_section h1{
+.why_section h1 {
   color: var(--white, #FFF);
-font-size: 48px;
-font-family: Inter;
-font-weight: 600;
-line-height: 119.5%;
+  font-size: 48px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 119.5%;
 }
 
 .how_section h1 {
   color: #000;
-font-size: 48px;
-font-family: Inter;
-font-weight: 600;
-line-height: 119.5%;
+  font-size: 48px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 119.5%;
 }
 
-.how_section h2{
+.how_section h2 {
   color: #000;
-text-align: center;
-font-size: 28px;
-font-family: Inter;
-font-weight: 700;
-line-height: 119.5%;
+  text-align: center;
+  font-size: 28px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 119.5%;
 }
 
-.how_section p{
+.how_section p {
   color: #000;
-text-align: center;
-font-size: 16px;
-font-family: Inter;
-line-height: 150%;
+  text-align: center;
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 150%;
 }
+
 .how_section img {
   padding-bottom: 10px;
 }
 
-.how_section img:first-child{
+.how_section img:first-child {
   padding-bottom: 15px;
-  padding-top:-10px ;
+  padding-top: -10px;
 }
 
 .fade-in-enter {
@@ -173,7 +174,7 @@ line-height: 150%;
 }
 
 
-.home-style h1{
+.home-style h1 {
   color: var(--white, #FFF);
   font-size: 64px;
   font-family: Inter;
@@ -181,101 +182,187 @@ line-height: 150%;
   line-height: 119.5%;
 }
 
-.home-style h3{
+.home-style h3 {
   font-size: 24px;
-font-family: Inter;
-font-weight: 600;
-line-height: 150%;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 150%;
 }
 
 .listen_section h1 {
   color: #000;
-font-size: 48px;
-font-family: Inter;
-font-weight: 600;
-line-height: 119.5%;
+  font-size: 48px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 119.5%;
 }
-.listen_section h4{
+
+.listen_section h4 {
   color: #000;
-font-size: 24px;
-font-family: Inter;
-font-weight: 600;
-line-height: 119.5%;
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 119.5%;
 }
 
 .listen_section p {
   color: #000;
-text-align: center;
-font-size: 16px;
-font-family: Inter;
-line-height: 150%;
+  text-align: center;
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 150%;
 }
 
-.end_card h1{
-  color:  #FFF;
-font-size: 48px;
-font-weight: 600;
-line-height: 119.5%;
+.end_card h1 {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 119.5%;
 }
 
 .end_card p {
   color: #FFF;
-text-align: center;
-font-size: 16px;
-font-family: Inter;
-line-height: 150%;
+  text-align: center;
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 150%;
 }
 
- .ent-btn {
+.ent-btn {
   font-size: 24px;
-font-family: Inter;
-font-weight: 600;
-line-height: 119.5%;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 119.5%;
 }
 
-.info-section{
+.info-section {
   color: #FFF;
-font-size: 36px;
-font-weight: 600;
+  font-size: 36px;
+  font-weight: 600;
 }
 
-.quick_link_section h3{
+.quick_link_section h3 {
   color: #FFFFFF;
 }
 
-.quick_link_section p{
+.quick_link_section p {
   color: #CCC;
-font-size: 18px;
-font-family: Inter;
-font-weight: 500;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 500;
 }
 
-.quick_link_section a{
+.quick_link_section a {
   color: #CCC;
-font-size: 18px;
-font-family: Inter;
-font-weight: 500;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 500;
 }
 
-.quick_link_section h5{
+.quick_link_section h5 {
   color: #CCC;
-font-size: 20px;
-font-weight: 600;
-line-height: 150%;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
 }
 
-.footer_bar{
+.footer_bar {
   /* background: linear-gradient(67.3deg, #1B0069 -32.92%, #AD00FF 101.42%) !important;
    */
   background: linear-gradient(67.3deg, #1B0069 -32.92%, #AD00FF 101.42%) !important;
 }
-.footer_bar p{
+
+.footer_bar p {
   color: #FFF;
-font-size: 18px;
-font-weight: 500;
-border-top: 1px solid #ccc; 
+  font-size: 18px;
+  font-weight: 500;
+  border-top: 1px solid #ccc;
 }
 
-.social_links a{
-  color:  #FFF;
+.social_links a {
+  color: #FFF;
+}
+
+.instruction-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.322);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s;
+}
+
+.instruction-modal-overlay.blurred {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.instruction-modal {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  width: 700px;
+  max-width: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease-in-out;
+}
+
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.step-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.step-list li {
+  margin-bottom: 10px;
+}
+
+.step-number {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.got-it-button {
+  border-radius: 5px;
+  background: #7201C2;
+  display: flex;
+  width: 137px;
+  padding: 5px 40px;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.d-flex.justify-content-center {
+  display: flex;
+  justify-content: center;
 }

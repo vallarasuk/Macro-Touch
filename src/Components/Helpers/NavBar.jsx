@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Btn from "../Assects/Button";
 import Logo from "../Assects/Logo";
 import CompanyName from "../Assects/CompanyName";
@@ -14,9 +15,9 @@ const NavBar = () => {
   };
 
   return (
-    <div  className="container pt-3">
+    <div className="container pt-3">
       <Navbar expand="md">
-        <Navbar.Brand href="#home" className="d-flex align-items-center">
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <Logo logo_icon={logo_images} />
           <CompanyName name="Macro Touch" />
         </Navbar.Brand>
@@ -24,34 +25,37 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto fw-bold">
             <Nav.Link
-            style={{ color: 'white' }}
-              href="#home"
+              as={Link}
+              to="/"
+              style={{ color: "white" }}
               className={`mx-2 ${activeLink === "home" ? "active-link" : ""}`}
               onClick={() => handleLinkClick("home")}
             >
               Home
             </Nav.Link>
             <Nav.Link
-              href="#about"
-              style={{ color: 'white' }}
-              className={`mx-2 ${activeLink === "about" ? "active-link" : ""}`}
-              onClick={() => handleLinkClick("about")}
+              as={Link}
+              to="/files"
+              style={{ color: "white" }}
+              className={`mx-2 ${activeLink === "files" ? "active-link" : ""}`}
+              onClick={() => handleLinkClick("files")}
             >
               Files
             </Nav.Link>
             <Nav.Link
-              href="#services"
-              style={{ color: 'white' }}
+              as={Link}
+              to="/price"
+              style={{ color: "white" }}
               className={`mx-2 ${
-                activeLink === "services" ? "active-link" : ""
+                activeLink === "pricing" ? "active-link" : ""
               }`}
-              onClick={() => handleLinkClick("services")}
+              onClick={() => handleLinkClick("pricing")}
             >
               Pricing
             </Nav.Link>
           </Nav>
           <Nav>
-            <Btn className="px-4 " button_name="Log In" />
+            <Btn className="px-4" button_name="Log In" link="/login" />
           </Nav>
         </Navbar.Collapse>
       </Navbar>

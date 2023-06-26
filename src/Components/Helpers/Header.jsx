@@ -10,8 +10,8 @@ import VerifyOTP from "../Assects/VerifyOTP";
 const Header = () => {
   return (
     <>
-      <VerifyOTP />
-      <Register />
+      {/* <VerifyOTP /> */}
+      {/* <Register /> */}
       <div className="home_section">
         <NavBar />
         <Home />

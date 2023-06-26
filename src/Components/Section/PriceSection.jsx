@@ -6,4 +6,4 @@ const PriceSection = () => {
   )
 }
 
-export default PriceSection
+export default PriceSection;
