@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/macro-touch/static/css/main.0871a26b.css",
+    "main.js": "/macro-touch/static/js/main.7da82d1a.js",
+    "static/media/heroimage.png": "/macro-touch/static/media/heroimage.a40ae0f91311d4f760e8.png",
+    "static/media/thinkimage.png": "/macro-touch/static/media/thinkimage.a7caa27d7852a0fa8560.png",
+    "static/media/Ellipse 4.png": "/macro-touch/static/media/Ellipse 4.94ae5c2cdcbcf074370b.png",
+    "static/media/usericon.svg": "/macro-touch/static/media/usericon.f1140608ae7a698a35742d1a90fc6507.svg",
+    "static/media/data-privacy.svg": "/macro-touch/static/media/data-privacy.6d799d2624e2d73c699d3e5aace152f0.svg",
+    "static/media/whiteLogo.svg": "/macro-touch/static/media/whiteLogo.ab0821c3940f289c4885bcf65291c234.svg",
+    "static/media/logomain.svg": "/macro-touch/static/media/logomain.f5f233c714cdb293debb8c44df7236ce.svg",
+    "static/media/Vector.svg": "/macro-touch/static/media/Vector.c5a6cda2586fb2618967254bb9bbc0a2.svg",
+    "static/media/ticketstar.svg": "/macro-touch/static/media/ticketstar.07b718beae4bf5aa861c982a3a78032a.svg",
+    "static/media/mdi_gear.svg": "/macro-touch/static/media/mdi_gear.3a523027e83b76ac78ee356709be713c.svg",
+    "static/media/timeline.svg": "/macro-touch/static/media/timeline.b2426225f36e8ee0f8e3848a601fa1e2.svg",
+    "static/media/accuracy.svg": "/macro-touch/static/media/accuracy.0fcc989a8a7fe5fbc867d01b542ce723.svg",
+    "static/media/material-symbols_cloud-download-rounded.svg": "/macro-touch/static/media/material-symbols_cloud-download-rounded.607eca6668cafd469c1e38bca24c5b41.svg",
+    "static/media/material-symbols_shield-lock-outline.svg": "/macro-touch/static/media/material-symbols_shield-lock-outline.2c8d965942bc6059c22b99a1cff21f19.svg",
+    "static/media/cloud-upload.svg": "/macro-touch/static/media/cloud-upload.0b3cb3d6551112271f994d4ab882cf7f.svg",
+    "index.html": "/macro-touch/index.html",
+    "static/media/uploadVector.svg": "/macro-touch/static/media/uploadVector.f0072fda1a970b2a434fc5e123b8a64f.svg",
+    "main.0871a26b.css.map": "/macro-touch/static/css/main.0871a26b.css.map",
+    "main.7da82d1a.js.map": "/macro-touch/static/js/main.7da82d1a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0871a26b.css",
+    "static/js/main.7da82d1a.js"
+  ]
+}
