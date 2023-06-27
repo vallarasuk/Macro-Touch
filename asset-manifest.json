@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/Macro-Touch/static/css/main.0871a26b.css",
-    "main.js": "/Macro-Touch/static/js/main.68c1c443.js",
+    "main.css": "/Macro-Touch/static/css/main.e54f92ab.css",
+    "main.js": "/Macro-Touch/static/js/main.2bd7e890.js",
     "static/media/heroimage.png": "/Macro-Touch/static/media/heroimage.a40ae0f91311d4f760e8.png",
     "static/media/thinkimage.png": "/Macro-Touch/static/media/thinkimage.a7caa27d7852a0fa8560.png",
     "static/media/Ellipse 4.png": "/Macro-Touch/static/media/Ellipse 4.94ae5c2cdcbcf074370b.png",
     "static/media/usericon.svg": "/Macro-Touch/static/media/usericon.f1140608ae7a698a35742d1a90fc6507.svg",
+    "static/media/Upload icon drag nd drop.svg": "/Macro-Touch/static/media/Upload icon drag nd drop.78c66c0888f1717e07f71d98939b8280.svg",
     "static/media/data-privacy.svg": "/Macro-Touch/static/media/data-privacy.323877da297b63ac4b24b8f7f18a27f1.svg",
     "static/media/whiteLogo.svg": "/Macro-Touch/static/media/whiteLogo.ab0821c3940f289c4885bcf65291c234.svg",
     "static/media/logomain.svg": "/Macro-Touch/static/media/logomain.0554e83d85619da2d379e8f551a76684.svg",
@@ -19,11 +20,11 @@
     "static/media/cloud-upload.svg": "/Macro-Touch/static/media/cloud-upload.6c7a99d60f506d09b0198885c07c2b39.svg",
     "index.html": "/Macro-Touch/index.html",
     "static/media/uploadVector.svg": "/Macro-Touch/static/media/uploadVector.f0072fda1a970b2a434fc5e123b8a64f.svg",
-    "main.0871a26b.css.map": "/Macro-Touch/static/css/main.0871a26b.css.map",
-    "main.68c1c443.js.map": "/Macro-Touch/static/js/main.68c1c443.js.map"
+    "main.e54f92ab.css.map": "/Macro-Touch/static/css/main.e54f92ab.css.map",
+    "main.2bd7e890.js.map": "/Macro-Touch/static/js/main.2bd7e890.js.map"
   },
   "entrypoints": [
-    "static/css/main.0871a26b.css",
-    "static/js/main.68c1c443.js"
+    "static/css/main.e54f92ab.css",
+    "static/js/main.2bd7e890.js"
   ]
 }
