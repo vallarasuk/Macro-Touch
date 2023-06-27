@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/macro-touch/static/css/main.0871a26b.css",
-    "main.js": "/macro-touch/static/js/main.ac237790.js",
-    "static/media/heroimage.png": "/macro-touch/static/media/heroimage.a40ae0f91311d4f760e8.png",
-    "static/media/thinkimage.png": "/macro-touch/static/media/thinkimage.a7caa27d7852a0fa8560.png",
-    "static/media/Ellipse 4.png": "/macro-touch/static/media/Ellipse 4.94ae5c2cdcbcf074370b.png",
-    "static/media/usericon.svg": "/macro-touch/static/media/usericon.f1140608ae7a698a35742d1a90fc6507.svg",
-    "static/media/data-privacy.svg": "/macro-touch/static/media/data-privacy.323877da297b63ac4b24b8f7f18a27f1.svg",
-    "static/media/whiteLogo.svg": "/macro-touch/static/media/whiteLogo.ab0821c3940f289c4885bcf65291c234.svg",
-    "static/media/logomain.svg": "/macro-touch/static/media/logomain.0554e83d85619da2d379e8f551a76684.svg",
-    "static/media/Vector.svg": "/macro-touch/static/media/Vector.1d513e2dac1d8de323c86ba6477af663.svg",
-    "static/media/ticketstar.svg": "/macro-touch/static/media/ticketstar.07b718beae4bf5aa861c982a3a78032a.svg",
-    "static/media/mdi_gear.svg": "/macro-touch/static/media/mdi_gear.239f69a3ea5b767031a67281c206106a.svg",
-    "static/media/timeline.svg": "/macro-touch/static/media/timeline.d10793bdfee4b943743b295e13521a63.svg",
-    "static/media/accuracy.svg": "/macro-touch/static/media/accuracy.34435a43db18ae92a3d308755bc4fcc9.svg",
-    "static/media/material-symbols_cloud-download-rounded.svg": "/macro-touch/static/media/material-symbols_cloud-download-rounded.51e8655f06c831d7b0f9ef88afeb15ad.svg",
-    "static/media/material-symbols_shield-lock-outline.svg": "/macro-touch/static/media/material-symbols_shield-lock-outline.95318fa24a24dad67c133f42bbca49c6.svg",
-    "static/media/cloud-upload.svg": "/macro-touch/static/media/cloud-upload.6c7a99d60f506d09b0198885c07c2b39.svg",
-    "index.html": "/macro-touch/index.html",
-    "static/media/uploadVector.svg": "/macro-touch/static/media/uploadVector.f0072fda1a970b2a434fc5e123b8a64f.svg",
-    "main.0871a26b.css.map": "/macro-touch/static/css/main.0871a26b.css.map",
-    "main.ac237790.js.map": "/macro-touch/static/js/main.ac237790.js.map"
+    "main.css": "/Macro-Touch/static/css/main.0871a26b.css",
+    "main.js": "/Macro-Touch/static/js/main.68c1c443.js",
+    "static/media/heroimage.png": "/Macro-Touch/static/media/heroimage.a40ae0f91311d4f760e8.png",
+    "static/media/thinkimage.png": "/Macro-Touch/static/media/thinkimage.a7caa27d7852a0fa8560.png",
+    "static/media/Ellipse 4.png": "/Macro-Touch/static/media/Ellipse 4.94ae5c2cdcbcf074370b.png",
+    "static/media/usericon.svg": "/Macro-Touch/static/media/usericon.f1140608ae7a698a35742d1a90fc6507.svg",
+    "static/media/data-privacy.svg": "/Macro-Touch/static/media/data-privacy.323877da297b63ac4b24b8f7f18a27f1.svg",
+    "static/media/whiteLogo.svg": "/Macro-Touch/static/media/whiteLogo.ab0821c3940f289c4885bcf65291c234.svg",
+    "static/media/logomain.svg": "/Macro-Touch/static/media/logomain.0554e83d85619da2d379e8f551a76684.svg",
+    "static/media/Vector.svg": "/Macro-Touch/static/media/Vector.1d513e2dac1d8de323c86ba6477af663.svg",
+    "static/media/ticketstar.svg": "/Macro-Touch/static/media/ticketstar.07b718beae4bf5aa861c982a3a78032a.svg",
+    "static/media/mdi_gear.svg": "/Macro-Touch/static/media/mdi_gear.239f69a3ea5b767031a67281c206106a.svg",
+    "static/media/timeline.svg": "/Macro-Touch/static/media/timeline.d10793bdfee4b943743b295e13521a63.svg",
+    "static/media/accuracy.svg": "/Macro-Touch/static/media/accuracy.34435a43db18ae92a3d308755bc4fcc9.svg",
+    "static/media/material-symbols_cloud-download-rounded.svg": "/Macro-Touch/static/media/material-symbols_cloud-download-rounded.51e8655f06c831d7b0f9ef88afeb15ad.svg",
+    "static/media/material-symbols_shield-lock-outline.svg": "/Macro-Touch/static/media/material-symbols_shield-lock-outline.95318fa24a24dad67c133f42bbca49c6.svg",
+    "static/media/cloud-upload.svg": "/Macro-Touch/static/media/cloud-upload.6c7a99d60f506d09b0198885c07c2b39.svg",
+    "index.html": "/Macro-Touch/index.html",
+    "static/media/uploadVector.svg": "/Macro-Touch/static/media/uploadVector.f0072fda1a970b2a434fc5e123b8a64f.svg",
+    "main.0871a26b.css.map": "/Macro-Touch/static/css/main.0871a26b.css.map",
+    "main.68c1c443.js.map": "/Macro-Touch/static/js/main.68c1c443.js.map"
   },
   "entrypoints": [
     "static/css/main.0871a26b.css",
-    "static/js/main.ac237790.js"
+    "static/js/main.68c1c443.js"
   ]
 }
