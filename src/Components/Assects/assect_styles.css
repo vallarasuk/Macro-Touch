@@ -113,17 +113,22 @@
 }
 
 .dropzone {
-    border: 2px dashed #999;
+    border: 2px dashed #EEF6FF;
     padding: 20px;
     text-align: center;
     cursor: pointer;
-  }
-  
-  .dropzone.active {
-    border-color: #0088ff;
-  }
-  
-  .dropzone p {
+    background-color: #B2CFF1;
+}
+
+.dropzone.active {
+    border-color: #B2CFF1;
+}
+
+.dropzone p {
     margin: 0;
-  }
-  
+}
+
+
+.browser_color {
+    color: #4C95EB;
+}
