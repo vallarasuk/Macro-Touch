@@ -1,25 +1,23 @@
 import React from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import think_image from "../Images/thinkimage.png";
 import profile from "../Images/Ellipse 4.png";
+import accuracy from "../Images/accuracy.svg";
+import dataPrivacy from "../Images/data-privacy.svg";
+import privacy from "../Images/material-symbols_shield-lock-outline.svg";
+import think_image from "../Images/thinkimage.png";
+import timeline from "../Images/timeline.svg";
 import EndCard from "./EndCard";
 import HowSection from "./HowSection";
 import "./helper_style.css";
-import privacy from "../Images/material-symbols_shield-lock-outline.svg";
-import accuracy from "../Images/accuracy.svg";
-import timeline from "../Images/timeline.svg";
-import dataPrivacy from "../Images/data-privacy.svg";
 
 const Content = () => {
   return (
     <>
-      {/* how it section */}
       <HowSection />
 
-      {/* why to choose us */}
-      <div className="why_section d-flex align-items-center">
+      <div className="why_section">
         <div className="container">
-          <h1 className="text-center mb-5">Why to Choose Us</h1>
+          <h1 className="mb-5 text-center">Why Choose Us</h1>
           <div className="row align-items-center">
             <div className="col-lg-8">
               <div className="row">
@@ -29,20 +27,17 @@ const Content = () => {
                   <p>Protect user data and ensure confidentiality.</p>
                 </div>
                 <div className="col-md-6 mb-5 px-3">
-                  <img src={accuracy} alt="Privacy" />
-
+                  <img src={accuracy} alt="Accuracy" />
                   <h2>Accuracy</h2>
                   <p>Improve data accuracy to enhance user experience.</p>
                 </div>
                 <div className="col-md-6 mb-5 px-3">
-                  <img src={timeline} alt="Privacy" />
-
+                  <img src={timeline} alt="Timeliness" />
                   <h2>Timeliness</h2>
                   <p>No delay to improve user satisfaction and experience.</p>
                 </div>
                 <div className="col-md-6 mb-5 px-3">
-                  <img src={dataPrivacy} alt="Privacy" />
-
+                  <img src={dataPrivacy} alt="Data Privacy" />
                   <h2>Data Privacy</h2>
                   <p>Not storing your data, ensuring no data leakage.</p>
                 </div>
@@ -59,9 +54,8 @@ const Content = () => {
         </div>
       </div>
 
-      {/* listen to other experiences */}
-      <div className="container my-5 listen_section d-flex align-items-center">
-        <div className="row justify-content-center mt-5 align-item-center">
+      <div className="container my-5 listen_section">
+        <div className="row justify-content-center mt-5">
           <div className="col-lg-10">
             <div>
               <h1 className="text-center">Listen to Others' Experiences</h1>

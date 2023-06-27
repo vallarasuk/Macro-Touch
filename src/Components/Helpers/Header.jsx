@@ -1,11 +1,9 @@
 import React from "react";
-import NavBar from "./NavBar";
-import "./helper_style.css";
-import Home from "./Home";
 import Content from "./Content";
 import Footer from "./Footer";
-import Register from "../Assects/Register";
-import VerifyOTP from "../Assects/VerifyOTP";
+import Home from "./Home";
+import NavBar from "./NavBar";
+import "./helper_style.css";
 
 const Header = () => {
   return (

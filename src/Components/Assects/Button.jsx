@@ -10,14 +10,12 @@ const Btn = ({ button_name, className, link }) => {
   };
 
   return (
-    <div>
-      <button
-        className={`${className} px-4 fw-bold text-capitalize button_style`}
-        onClick={handleClick}
-      >
-        {button_name}
-      </button>
-    </div>
+    <button
+      className={`${className} px-4 fw-bold text-capitalize button_style`}
+      onClick={handleClick} // Call handleClick function on click
+    >
+      {button_name}
+    </button>
   );
 };
 
