@@ -3,6 +3,7 @@ import { useDropzone } from "react-dropzone";
 import Modal from "react-modal";
 import DragUpload from "../Images/Upload icon drag nd drop.svg";
 import BankSelect from "./BankSelect";
+import { CSSTransition } from "react-transition-group";
 
 const DragAndDropComponent = () => {
   const acceptedFormats = ["image/jpeg", "application/pdf", "text/csv"];
@@ -120,31 +121,41 @@ const DragAndDropComponent = () => {
         <button onClick={closeModal}>Close</button>
       </Modal>
 
-      <Modal
-        isOpen={successModalIsOpen}
-        onRequestClose={closeSuccessModal}
-        contentLabel="Success Modal"
-        style={{
-          overlay: {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          },
-          content: {
-            position: "relative",
-            top: "auto",
-            left: "auto",
-            right: "auto",
-            bottom: "auto",
-            maxWidth: "400px",
-            margin: "auto",
-          },
-        }}
+      <CSSTransition
+        in={successModalIsOpen}
+        timeout={300}
+        classNames="modal"
+        unmountOnExit
       >
-        <h2>Success</h2>
-        <p>File uploaded successfully.</p>
-        <button onClick={closeSuccessModal}>Close</button>
-      </Modal>
+        <Modal
+          isOpen={successModalIsOpen}
+          onRequestClose={closeSuccessModal}
+          contentLabel="Success Modal"
+          style={{
+            overlay: {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            },
+            content: {
+              position: "relative",
+              top: "auto",
+              left: "auto",
+              right: "auto",
+              bottom: "auto",
+              maxWidth: "400px",
+              margin: "auto",
+            },
+          }}
+        >
+          <div className="success-container">
+            <i className="fas fa-check-circle"></i>
+            <h2>Success</h2>
+            <p>File uploaded successfully.</p>
+            <button onClick={closeSuccessModal}>Close</button>
+          </div>
+        </Modal>
+      </CSSTransition>
     </div>
   );
 };

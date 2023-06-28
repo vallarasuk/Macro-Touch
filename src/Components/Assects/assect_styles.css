@@ -132,3 +132,50 @@
 .browser_color {
     color: #4C95EB;
 }
+
+
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.modal-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-exit-active {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.success-container {
+    text-align: center;
+}
+
+.success-container i {
+    color: #28a745;
+    font-size: 48px;
+    animation: successAnimation 0.5s ease-in-out;
+}
+
+@keyframes successAnimation {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
