@@ -1,7 +1,7 @@
 {
   "homepage": "https://vallarasuk.github.io/Macro-Touch",
   "name": "macro-touch",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": true,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
