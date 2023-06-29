@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import Btn from "../Assects/Button";
 import FilePreview from "./FilePreview";
 
 const BankSelect = ({
@@ -9,22 +8,55 @@ const BankSelect = ({
   fileName,
   handleReupload,
   isProcessing,
+  selectedBank,
+  setSelectedBank,
 }) => {
-  const [selectedBank, setSelectedBank] = useState(null);
+  const [amount, setAmount] = useState("");
+  const [errorBank, setErrorBank] = useState("");
+  const [errorAmount, setErrorAmount] = useState("");
+
 
   const bankOptions = [
-    { value: "bank1", label: "Bank 1" },
-    { value: "bank2", label: "Bank 2" },
+    { value: "Axis_Bank", label: "Axis Bank" },
+    { value: "BOI_Bank", label: "BOI Bank" },
+    { value: "HDFC_Bank", label: "HDFC Bank" },
+    { value: "ICICI_Bank", label: "ICICI Bank" },
+    { value: "IDBI_Bank", label: "IDBI Bank" },
+    { value: "INDIAN_Bank", label: "Indian bank" },
+    { value: "KVB_Bank", label: "KVB bank" },
+    { value: "UNION_Bank", label: "Union bank" },
+    { value: "YES_Bank", label: "YES bank" },
     // Add more options for Indian banks
   ];
 
   const handleBankChange = (selectedOption) => {
     setSelectedBank(selectedOption);
+    setErrorBank("");
   };
 
+  const handleAmountChange = (event) => {
+    setAmount(event.target.value);
+    setErrorBank("");
+  };
+
+  const handleValidate = () => {
+    if (!selectedBank) {
+      setErrorBank("Please select a bank.");
+      return;
+    }
+    if (amount === "") {
+      setErrorAmount("Please enter the maximum amount.");
+      return;
+    }
+    handleUpload();
+  };
+
+
+  
+
   return (
-    <div className="row justify-content-evenly my-5">
-      <div className="col-4">
+    <div className="row justify-content-around my-5">
+      <div className="col-5">
         <Select
           options={bankOptions}
           value={selectedBank}
@@ -32,30 +64,28 @@ const BankSelect = ({
           placeholder="Select Bank"
           className="bank-select"
         />
+        {errorBank && <p className="error-message">{errorBank}</p>}
       </div>
-      <div className="col-4">
+      <div className="col-5">
         <input
           type="number"
           className="input-amount"
           placeholder="Enter the maximum amount"
+          value={amount}
+          onChange={handleAmountChange}
         />
+        {errorAmount && <p className="error-message">{errorAmount}</p>}
       </div>
       <div className="d-flex justify-content-center align-items-center my-4">
-
-      {filePreview ? (
+        {filePreview ? (
           <FilePreview
             filePreview={filePreview}
             fileName={fileName}
             handleReupload={handleReupload}
-            handleUpload={handleUpload}
+            handleUpload={handleValidate}
             isProcessing={isProcessing}
           />
         ) : null}
-        {/* <Btn
-          button_name="Upload"
-          className="upload-btn"
-          onClick={handleUpload}
-        /> */}
       </div>
     </div>
   );

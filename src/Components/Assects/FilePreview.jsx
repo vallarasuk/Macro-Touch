@@ -1,5 +1,4 @@
 import React from "react";
-import Btn from "./Button";
 
 const FilePreview = ({
   filePreview,
@@ -10,7 +9,7 @@ const FilePreview = ({
 }) => {
   return (
     <div>
-      <h3>File Preview: {fileName}</h3>
+      <span className="py-5">File Preview: <strong>{fileName}</strong></span>
       {filePreview.startsWith("data:image") ? (
         <img src={filePreview} alt="File Preview" />
       ) : (
@@ -18,16 +17,12 @@ const FilePreview = ({
         // <p>{filePreview}</p> to preview the file
       )}
       {!isProcessing && (
-        <div>
-          <button onClick={handleReupload}>Remove</button>
-          {/* <button className="upload-btn" onClick={handleUpload}>
+        <div className="justify-content-center align-items-center d-flex">
+          <button className="remove-btn mx-3" onClick={handleReupload}>Remove</button>
+          <button className="upload-btn mx-3" onClick={handleUpload}>
             Upload
-          </button> */}
-          <Btn
-            button_name="Upload"
-            className="upload-btn"
-            onClick={handleUpload}
-          />
+          </button>
+         
         </div>
       )}
     </div>

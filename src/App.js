@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.min";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import Login from './Components/Assects/Login';
 import Register from './Components/Assects/Register';
-import "./Components/Assects/assect_styles.css";
+import './Components/Assects/assect_styles.css';
 import InstructionModal from './Components/Helpers/InstructionModal'; // Import the InstructionModal component
-import "./Components/Helpers/helper_style.css";
+import './Components/Helpers/helper_style.css';
 import FileSection from './Components/Section/FileSection';
 import HomeSection from './Components/Section/HomeSection';
 import PricingSection from './Components/Section/PriceSection';

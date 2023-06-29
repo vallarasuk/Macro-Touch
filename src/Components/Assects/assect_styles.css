@@ -307,6 +307,7 @@
     border: none;
     height: 40px;
     padding: 10px 5px;
+    width: auto;
 }
 
 .input-amount::-webkit-outer-spin-button,
@@ -343,4 +344,58 @@
 
 .modal-content.fade-out {
     opacity: 0;
+}
+
+.upload-btn {
+    padding: 5px 17px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--primary, #FFC231);
+    border: none;
+}
+
+.remove-btn {
+    padding: 5px 17px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    border-radius: 9px;
+    background: var(--primary, #FFC231);
+    border: none;
+    color: #FFF;
+    font-size: 14.235px;
+    /* font-family: Poppins; */
+    font-weight: 600;
+}
+
+.download-preview {
+    width: 167px;
+    height: 207px;
+    border-radius: 1px;
+    border-radius: 5px;
+    border: 0.2px solid #000;
+    background: #FFFDFD;
+}
+
+
+.process-content {
+    color: #000;
+    text-align: center;
+    font-size: 12px;
+    font-family: Inter;
+}
+
+.processing-img{
+    width: 270px;
+height: 229px;
+background: url(../Images/processing-page-icon.png), lightgray 50% / cover no-repeat;
 }
