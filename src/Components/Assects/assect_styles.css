@@ -179,3 +179,168 @@
         transform: scale(1);
     }
 }
+
+.oops-parent {
+    background-color: #FC6161;
+    height: 60vh;
+}
+
+.oops-title {
+    color: #FFF;
+    font-size: 42.783px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.oops-button {
+    border-radius: 5px;
+    background: var(--white, #FFF);
+    padding: 10px 30px;
+    color: #FC6161;
+    font-size: 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+}
+
+.opps-fail-title {
+    color: #FFF;
+    font-size: 40px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.oops-fail-title-content {
+    color: #FFF;
+    font-size: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.oops-fail-connect-link {
+    color: #FFF;
+    font-size: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.success-title h1 {
+    color: var(--white, #FFF);
+    font-size: 54.788px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.success-parent {
+    width: 709px;
+    height: 325px;
+    border-radius: 6px;
+    background: #61FC83;
+}
+
+.success-title p {
+    color: var(--white, #FFF);
+    font-size: 21.599px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.success-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-dialog {
+    margin: 0;
+    width: 100%;
+    /* max-width: 500px; */
+}
+
+.modal-content {
+    border-radius: 6px;
+    background: #61FC83;
+}
+
+.modal-body {
+    padding: 40px;
+}
+
+.success-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adds background blur */
+}
+
+
+.back-button {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.bank-select {
+    background-color: #f2f2f2;
+    border: none;
+    height: 40px;
+}
+
+.input-amount {
+    background-color: #f2f2f2;
+    border: none;
+    height: 40px;
+    padding: 10px 5px;
+}
+
+.input-amount::-webkit-outer-spin-button,
+.input-amount::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.upload-btn {
+    color: var(--white, #FFF);
+    text-align: center;
+    font-size: 17.218px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25.828px;
+}
+
+
+.modal-appear {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.modal-appear-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.modal-content {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.modal-content.fade-out {
+    opacity: 0;
+}

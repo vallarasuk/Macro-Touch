@@ -449,3 +449,7 @@ ul>li {
   font-family: Poppins;
   font-weight: 600;
 }
+
+.file-section-container {
+  max-width: 800px;
+}

@@ -4,6 +4,10 @@ import Modal from "react-modal";
 import DragUpload from "../Images/Upload icon drag nd drop.svg";
 import BankSelect from "./BankSelect";
 import { CSSTransition } from "react-transition-group";
+import OppsError from "./OppsError";
+import Btn from "./Button";
+import FilePreview from "./FilePreview";
+import FileSectionProcess from "./FileSectionProcess";
 
 const DragAndDropComponent = () => {
   const acceptedFormats = ["image/jpeg", "application/pdf", "text/csv"];
@@ -12,6 +16,7 @@ const DragAndDropComponent = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [successModalIsOpen, setSuccessModalIsOpen] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false); // Track if processing is in progress
 
   const onDrop = (acceptedFiles, rejectedFiles) => {
     if (
@@ -27,7 +32,6 @@ const DragAndDropComponent = () => {
     const reader = new FileReader();
     reader.onload = () => {
       setFilePreview(reader.result);
-      setSuccessModalIsOpen(true); // Show the success modal
     };
 
     if (file.type.startsWith("image")) {
@@ -51,14 +55,33 @@ const DragAndDropComponent = () => {
 
   const closeModal = () => {
     setModalIsOpen(false);
+    setFilePreview(null);
+    setFileName("");
+    setErrorMessage("");
   };
 
   const closeSuccessModal = () => {
     setSuccessModalIsOpen(false);
   };
 
+  const handleUpload = (value) => {
+    // Perform processing logic here
+    setIsProcessing(true);
+
+    // Simulating processing delay with setTimeout
+    setTimeout(() => {
+      setIsProcessing(false);
+      setSuccessModalIsOpen(true); // Show the success modal
+    }, 2000);
+  };
+
   return (
     <div>
+      <FileSectionProcess
+        uploadStyle={{ color: fileName ? "black" : "gray" }}
+        processStyle={{ color: fileName ? "black" : "gray" }}
+        downloadStyle={{ color: fileName ? "black" : "gray" }}
+      />
       <div
         {...getRootProps()}
         className={`dropzone my-3 ${isDragActive ? "active" : ""}`}
@@ -72,38 +95,39 @@ const DragAndDropComponent = () => {
               Browser
             </span>
           </h1>
-          <p className="text-muted">Supported formates : JPEG, PDF, CSV</p>
+          <p className="text-muted">Supported formats: JPEG, PDF, CSV</p>
         </div>
       </div>
       <div className="row">
         <div className="col-12">
-          <BankSelect />
+          <BankSelect
+            filePreview={filePreview}
+            fileName={fileName}
+            handleReupload={handleReupload}
+            handleUpload={handleUpload}
+            isProcessing={isProcessing}
+          />
         </div>
+        
       </div>
-      {filePreview ? (
-        <div>
-          <h3>File Preview: {fileName}</h3>
-          {filePreview.startsWith("data:image") ? (
-            <img src={filePreview} alt="File Preview" />
-          ) : (
-            <></>
-            // <p>{filePreview}</p> to preview the file
-          )}
-          <div>
-            <button onClick={handleReupload}>Reupload</button>
-          </div>
-        </div>
-      ) : null}
 
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Error Modal"
+        shouldCloseOnOverlayClick={false}
+        className={{
+          base: "modal-appear",
+          afterOpen: "modal-appear-active",
+          beforeClose: "modal-appear",
+        }}
         style={{
           overlay: {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            zIndex: 9999,
           },
           content: {
             position: "relative",
@@ -111,14 +135,17 @@ const DragAndDropComponent = () => {
             left: "auto",
             right: "auto",
             bottom: "auto",
-            maxWidth: "400px",
-            margin: "auto",
+            minWidth: "500px",
+            margin: "20px",
+            padding: "0px",
+            backgroundColor: "transparent",
+            border: "none",
           },
         }}
       >
-        <h2>Error</h2>
-        <p>Please upload a JPEG, PDF, or CSV file.</p>
-        <button onClick={closeModal}>Close</button>
+        <div className="text-white oops-parent">
+          <OppsError onClose={closeModal} />
+        </div>
       </Modal>
 
       <CSSTransition
@@ -156,6 +183,14 @@ const DragAndDropComponent = () => {
           </div>
         </Modal>
       </CSSTransition>
+
+      {/* Processing Screen */}
+      {isProcessing && (
+        <div className="processing-screen">
+          <h2>Processing...</h2>
+          <p>Please wait while the file is being processed.</p>
+        </div>
+      )}
     </div>
   );
 };
