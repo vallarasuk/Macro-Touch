@@ -80,20 +80,29 @@ const DragAndDropComponent = () => {
       setSuccessModalIsOpen(true);
       setShowDownloadScreen(true);
       setFileName(fileName);
-    }, 20000);
+    }, 10000);
   };
 
+  const uploadStyle = showDownloadScreen ? "text-muted" : "text-dark";
+  const processStyle = isProcessing ? "text-dark" : "text-muted";
+  const downloadStyle = showDownloadScreen
+    ? processStyle === "text-dark"
+      ? "text-muted"
+      : "text-dark"
+    : "text-muted";
   const isNextStepAllowed = filePreview && fileName && selectedBank;
 
+
+
+  
   return (
     <div>
-        <Processing />
-      
       <FileSectionProcess
-        uploadStyle={{ color: fileName ? "black" : "gray" }}
-        processStyle={{ color: fileName ? "black" : "gray" }}
-        downloadStyle={{ color: fileName ? "black" : "gray" }}
+        uploadStyle={uploadStyle}
+        processStyle={processStyle}
+        downloadStyle={downloadStyle}
       />
+
       {isProcessing ? (
         <Processing />
       ) : showDownloadScreen ? (
