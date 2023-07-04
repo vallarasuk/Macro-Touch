@@ -18,7 +18,8 @@ const EndCard = () => {
             leakage and no data storing. Grab your first report and have a
             comprehensive view of your bank account.
           </p>
-          <Btn button_name="Get Started" className="custom_color" />
+            
+          <Btn button_name="Get Started" link="/get_started"  className="custom_color" />
         </div>
       </div>
     </div>

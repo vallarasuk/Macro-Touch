@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DownloadScreen from "./DownloadScreen";
-import OppsError from "./OppsError";
+// import OppsError from "./OppsError";
 // import ErrorScreen from "./ErrorScreen";
 
 const Processing = () => {
@@ -60,7 +60,8 @@ const Processing = () => {
       <div className="processing-screen">
         <div className="processing-img"></div>
         <p className="process-content fw-bold">
-          "Prepare your coffee to take a sip while going through the report ....."
+          "Prepare your coffee to take a sip while going through the report
+          ....."
         </p>
         <div style={barStyles}>
           <div style={loadingStyles}></div>

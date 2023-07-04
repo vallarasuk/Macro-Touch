@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="row">
           <div className="col d-flex justify-content-between p-5">
             <div className="info-section">
-              <Navbar.Brand href="#home" className="d-flex align-items-center">
+              <Navbar.Brand href="/" className="d-flex align-items-center">
                 <Logo logo_icon={logo_image} />
                 <CompanyName name="Macro Touch" />
               </Navbar.Brand>
@@ -32,7 +32,7 @@ const Footer = () => {
                 <h3 className="mb-5">Quick Links</h3>
                 <ul className="list-unstyled my-4">
                   <li>
-                    <a href="#/" className="text-decoration-none">
+                    <a href="/" className="text-decoration-none">
                       Home
                     </a>
                   </li>
@@ -42,7 +42,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#/" className="text-decoration-none">
+                    <a href="/price" className="text-decoration-none">
                       Pricing
                     </a>
                   </li>
@@ -53,19 +53,40 @@ const Footer = () => {
 
                 <div>
                   <p>
-                    <FaEnvelope className="icon me-2" /> support@macrotouch.com
+                    <a
+                      href="mailto:support@macrotouch.com"
+                      className="text-decoration-none"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FaEnvelope className="icon me-2" />
+                      support@macrotouch.com
+                    </a>
                   </p>
                 </div>
                 <div>
                   <p>
-                    <FaPhone className="icon me-2" /> +917604963319
+                    <a
+                      href="tel:+917604963319"
+                      className="text-decoration-none"
+                    >
+                      <FaPhone className="icon me-2" /> +917604963319
+                    </a>
                   </p>
                 </div>
+
                 <div>
                   <p>
-                    <FaMapMarkerAlt className="icon me-2" /> 232, Salem Main
-                    Road,
-                    <br /> Chinnasalem
+                    <a
+                      href="https://www.google.com/maps/search/232%2C%20Salem%20Main%20Road%2C%20Chinnasalem"
+                      className="text-decoration-none"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FaMapMarkerAlt className="icon me-2" /> 232, Salem Main
+                      Road,
+                      <br /> Chinnasalem
+                    </a>
                   </p>
                 </div>
               </div>
@@ -73,6 +94,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <FooterBar />
     </>
   );

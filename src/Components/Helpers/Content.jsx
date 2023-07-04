@@ -10,6 +10,28 @@ import EndCard from "./EndCard";
 import HowSection from "./HowSection";
 import "./helper_style.css";
 
+const testimonials = [
+  {
+    name: "John Doe",
+    testimonial:
+      "Before MacroTouch, I struggled to understand my bank statement. Now, with automatic categorization and a clear summary, I recommend it to anyone seeking financial clarity.",
+    profile_image: profile,
+  },
+  {
+    name: "John Doe",
+    testimonial:
+      "Before MacroTouch, I struggled to understand my bank statement. Now, with automatic categorization and a clear summary, I recommend it to anyone seeking financial clarity.",
+    profile_image: profile,
+  },
+  {
+    name: "John Doe",
+    testimonial:
+      "Before MacroTouch, I struggled to understand my bank statement. Now, with automatic categorization and a clear summary, I recommend it to anyone seeking financial clarity.",
+    profile_image: profile,
+  },
+  // Add more testimonials here
+];
+
 const Content = () => {
   return (
     <>
@@ -61,82 +83,54 @@ const Content = () => {
               <h1 className="text-center">Listen to Others' Experiences</h1>
               <div
                 id="carouselExampleRide"
-                className="carousel slide my-5 text-center"
+                className={`carousel slide my-5 text-center`}
                 data-bs-ride="carousel"
               >
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <div className="row justify-content-center my-4">
-                      <div className="col-10 col-md-6">
-                        <img
-                          src={profile}
-                          className="d-block mx-auto"
-                          alt="..."
-                        />
+                <div className={`carousel-inner `}>
+                  {testimonials.map((testimonial, index) => (
+                    <div
+                      className={`carousel-item ${index === 0 ? "active" : ""}`}
+                      key={index}
+                    >
+                      <div className="row justify-content-center my-4">
+                        <div className="col-10 col-md-6">
+                          <img
+                            src={testimonial.profile_image}
+                            className="d-block mx-auto"
+                            alt="..."
+                          />
+                        </div>
                       </div>
+                      <h4 className="fw-bold">{testimonial.name}</h4>
+                      <p className="text-center col-10 offset-1">
+                        {testimonial.testimonial}
+                      </p>
                     </div>
-                    <h4 className="fw-bold">John Doe</h4>
-                    <p className="text-center col-10 offset-1">
-                      "Before MacroTouch, I struggled to understand my bank
-                      statement. Now, with automatic categorization and a clear
-                      summary, I recommend it to anyone seeking financial
-                      clarity."
-                    </p>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="row justify-content-center my-4">
-                      <div className="col-10 col-md-6">
-                        <img
-                          src={profile}
-                          className="d-block mx-auto"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                    <h4 className="fw-bold">John Doe</h4>
-                    <p className="text-center col-10 offset-1">
-                      "Before MacroTouch, I struggled to understand my bank
-                      statement. Now, with automatic categorization and a clear
-                      summary, I recommend it to anyone seeking financial
-                      clarity."
-                    </p>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="row justify-content-center my-4">
-                      <div className="col-10 col-md-6">
-                        <img
-                          src={profile}
-                          className="d-block mx-auto"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                    <h4 className="fw-bold">John Doe</h4>
-                    <p className="text-center col-10 offset-1">
-                      "Before MacroTouch, I struggled to understand my bank
-                      statement. Now, with automatic categorization and a clear
-                      summary, I recommend it to anyone seeking financial
-                      clarity."
-                    </p>
-                  </div>
+                  ))}
                 </div>
 
                 <button
-                  className="carousel-control-prev"
+                  className={`carousel-control-prev`}
                   type="button"
                   data-bs-target="#carouselExampleRide"
                   data-bs-slide="prev"
                 >
-                  <BsChevronLeft size={34} className="carousel-control-icon" />
+                  <BsChevronLeft
+                    size={34}
+                    className={`carousel-control-icon `}
+                  />
                   <span className="visually-hidden">Previous</span>
                 </button>
                 <button
-                  className="carousel-control-next"
+                  className={`carousel-control-next `}
                   type="button"
                   data-bs-target="#carouselExampleRide"
                   data-bs-slide="next"
                 >
-                  <BsChevronRight size={34} className="carousel-control-icon" />
+                  <BsChevronRight
+                    size={34}
+                    className={`carousel-control-icon `}
+                  />
                   <span className="visually-hidden">Next</span>
                 </button>
               </div>
