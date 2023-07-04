@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Macro-Touch/static/css/main.f86ef0e7.css",
-    "main.js": "/Macro-Touch/static/js/main.fff978da.js",
+    "main.css": "/Macro-Touch/static/css/main.582e2b85.css",
+    "main.js": "/Macro-Touch/static/js/main.cfc4e5ea.js",
     "static/media/heroimage.png": "/Macro-Touch/static/media/heroimage.a40ae0f91311d4f760e8.png",
     "static/media/thinkimage.png": "/Macro-Touch/static/media/thinkimage.a7caa27d7852a0fa8560.png",
     "static/media/Ellipse 4.png": "/Macro-Touch/static/media/Ellipse 4.94ae5c2cdcbcf074370b.png",
@@ -23,11 +23,11 @@
     "static/media/Arrow 1.svg": "/Macro-Touch/static/media/Arrow 1.a5e143cae9b91a61a467923a8f690aa9.svg",
     "static/media/uploadVector.svg": "/Macro-Touch/static/media/uploadVector.f0072fda1a970b2a434fc5e123b8a64f.svg",
     "static/media/Vector 1.svg": "/Macro-Touch/static/media/Vector 1.a2d68eb0a349774a4928.svg",
-    "main.f86ef0e7.css.map": "/Macro-Touch/static/css/main.f86ef0e7.css.map",
-    "main.fff978da.js.map": "/Macro-Touch/static/js/main.fff978da.js.map"
+    "main.582e2b85.css.map": "/Macro-Touch/static/css/main.582e2b85.css.map",
+    "main.cfc4e5ea.js.map": "/Macro-Touch/static/js/main.cfc4e5ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.f86ef0e7.css",
-    "static/js/main.fff978da.js"
+    "static/css/main.582e2b85.css",
+    "static/js/main.cfc4e5ea.js"
   ]
 }
