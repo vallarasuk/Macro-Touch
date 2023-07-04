@@ -12,14 +12,16 @@ const OppsError = ({ onClose }) => {
   };
 
   return (
-    <div className="oops-error-container">
-      <div className={`oops-parent ${fadeOut ? "fade-out" : ""}`}>
-        <div className="text-center">
+    <div className="container">
+      <div
+        className={`row justify-content-center ${fadeOut ? "fade-out" : ""}`}
+      >
+        <div className="col text-center">
           <img src={OppsErrorImage} alt="Oops error" />
-          <h2>Error</h2>
+          <h2 className="mt-4">Error</h2>
           <p>Please upload a JPEG, PDF, or CSV file.</p>
-          <h1 className="oops-title my-5">Oops!</h1>
-          <button className="oops-button" onClick={handleTryAgain}>
+          <h1 className="display-4 my-5">Oops!</h1>
+          <button className="btn btn-primary" onClick={handleTryAgain}>
             Try again
           </button>
         </div>

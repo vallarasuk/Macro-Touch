@@ -8,9 +8,15 @@ import UserProfile from "./UserProfile";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
+    setIsMenuOpen(false);
+  };
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -25,8 +31,14 @@ const NavBar = () => {
             </h4>
           </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={handleMenuToggle}
+        />
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className={`justify-content-md-end ${isMenuOpen ? "show" : ""}`}
+        >
           <Nav className="mx-auto fw-bold">
             <Nav.Link
               as={Link}
@@ -59,7 +71,7 @@ const NavBar = () => {
             </Nav.Link>
           </Nav>
           <Nav>
-           <UserProfile/>   
+            <UserProfile />
           </Nav>
         </Navbar.Collapse>
       </Navbar>

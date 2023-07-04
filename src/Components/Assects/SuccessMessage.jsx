@@ -1,9 +1,7 @@
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-// import stars from "../Images/Star.svg";
-// import elips from "../Images/Ellipse.svg";
-// import polyon from "../Images/Polygon.svg";
+import "./assect_styles.css"
 
 const SuccessMessage = ({ closeModal }) => {
   const handleCloseModal = () => {

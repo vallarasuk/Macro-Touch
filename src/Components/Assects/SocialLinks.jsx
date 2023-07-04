@@ -1,17 +1,18 @@
 import React from "react";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import "./assect_styles.css"
 
 const SocialLinks = () => {
   return (
-    <div className="px-2 social_links">
+    <div className="social_links">
       <a href="#/">
-        <FaInstagram className="me-3" />
+        <FaInstagram className="social_icon" />
       </a>
       <a href="#/">
-        <FaFacebook className="mx-3" />
+        <FaFacebook className="social_icon" />
       </a>
       <a href="#/">
-        <FaTwitter className="mx-3" />
+        <FaTwitter className="social_icon" />
       </a>
     </div>
   );

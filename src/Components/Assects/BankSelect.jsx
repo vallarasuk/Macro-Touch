@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import FilePreview from "./FilePreview";
+import "../Helpers/helper_style.css";
 
 const BankSelect = ({
   handleUpload,
@@ -14,7 +15,6 @@ const BankSelect = ({
   const [amount, setAmount] = useState("");
   const [errorBank, setErrorBank] = useState("");
   const [errorAmount, setErrorAmount] = useState("");
-
 
   const bankOptions = [
     { value: "Axis_Bank", label: "Axis Bank" },
@@ -51,12 +51,9 @@ const BankSelect = ({
     handleUpload();
   };
 
-
-  
-
   return (
     <div className="row justify-content-around my-5">
-      <div className="col-5">
+      <div className="col-12 col-md-5 mb-3">
         <Select
           options={bankOptions}
           value={selectedBank}
@@ -66,7 +63,7 @@ const BankSelect = ({
         />
         {errorBank && <p className="error-message">{errorBank}</p>}
       </div>
-      <div className="col-5">
+      <div className="col-12 col-md-5">
         <input
           type="number"
           className="input-amount"
@@ -76,7 +73,7 @@ const BankSelect = ({
         />
         {errorAmount && <p className="error-message">{errorAmount}</p>}
       </div>
-      <div className="d-flex justify-content-center align-items-center my-4">
+      <div className="col-12 mt-4">
         {filePreview ? (
           <FilePreview
             filePreview={filePreview}

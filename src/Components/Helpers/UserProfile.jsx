@@ -1,6 +1,7 @@
 import React from "react";
 import userIcon from "../Images/usericon.svg";
 import tickStar from "../Images/ticketstar.svg";
+import "./helper_style.css";
 
 const UserProfile = () => {
   return (

@@ -54,10 +54,7 @@ const HowSection = () => {
         </div>
         <div className="text-center my-5">
           {/* <Btn button_name="Get started" /> */}
-          <Btn
-            button_name="Get Started"
-            link="/get_started"
-          />
+          <Btn button_name="Get Started" link="/get_started" />
         </div>
       </div>
     </div>

@@ -96,8 +96,9 @@ const Content = () => {
                         <div className="col-10 col-md-6">
                           <img
                             src={testimonial.profile_image}
-                            className="d-block mx-auto"
+                            className="d-block mx-auto img-fluid rounded-circle"
                             alt="..."
+                            style={{ maxWidth: "150px" }} // Set maximum width for the profile image
                           />
                         </div>
                       </div>

@@ -30,11 +30,11 @@ const PriceCard = () => {
 
   return (
     <div className="container">
-        <NavBarCommon />
+      <NavBarCommon />
       <h1 className="text-center my-3">The Credit Packs</h1>
       <div className="row mt-5 justify-content-evenly align-items-center">
         {cards.map((card, index) => (
-          <div className="col-lg-4 col-md-6" key={index}>
+          <div className="col-lg-4 col-md-6 mb-4" key={index}>
             <Card {...card} /> {/* Render the Card component with the props */}
           </div>
         ))}

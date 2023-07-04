@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import CompanyName from "./CompanyName";
 import logo_images from "../Images/logomain.svg";
 import Btn from "./Button";
+import "./VerifyOTP.css"; // Your custom CSS file
 
 const VerifyOTP = () => {
   const inputRefs = useRef([]);
@@ -72,17 +73,7 @@ const VerifyOTP = () => {
         <div className="mt-md-5 pt-md-5">
           <h1>Register to use our service</h1>
           <p>Enter Your received OTP</p>
-          <div
-            className="otp-input-container my-5"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              width: "100%",
-              padding: "0px 18px",
-              alignItems: "flex-start",
-              gap: "8px",
-            }}
-          >
+          <div className="otp-input-container my-5">
             {[...Array(6)].map((_, index) => (
               <input
                 key={index}
@@ -92,15 +83,6 @@ const VerifyOTP = () => {
                 maxLength={1}
                 onChange={(e) => handleInputChange(e, index)}
                 onKeyDown={(e) => handleKeyDown(e, index)}
-                style={{
-                  borderRadius: "6px",
-                  background: "#FFF",
-                  width: "76px",
-                  height: "90px",
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  fontSize: "20px",
-                }}
               />
             ))}
           </div>

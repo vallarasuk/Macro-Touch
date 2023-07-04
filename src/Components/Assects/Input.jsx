@@ -10,12 +10,15 @@ const Input = (props) => {
   };
 
   return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      onChange={handleChange}
-    />
+    <div className="input-container">
+      <input
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={handleChange}
+        className="input-field"
+      />
+    </div>
   );
 };
 

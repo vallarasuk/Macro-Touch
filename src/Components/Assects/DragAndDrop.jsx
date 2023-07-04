@@ -92,123 +92,124 @@ const DragAndDropComponent = () => {
     : "text-muted";
   const isNextStepAllowed = filePreview && fileName && selectedBank;
 
-
-
-  
   return (
-    <div>
-      <FileSectionProcess
-        uploadStyle={uploadStyle}
-        processStyle={processStyle}
-        downloadStyle={downloadStyle}
-      />
-
-      {isProcessing ? (
-        <Processing />
-      ) : showDownloadScreen ? (
-        <DownloadScreen fileName={fileName} />
-      ) : (
-        <>
-          <DragInput
-            isDragActive={isDragActive}
-            getInputProps={getInputProps}
-            getRootProps={getRootProps}
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12 mx-auto">
+          <FileSectionProcess
+            uploadStyle={uploadStyle}
+            processStyle={processStyle}
+            downloadStyle={downloadStyle}
           />
-          <div className="row">
-            <div className="col-12">
-              <BankSelect
-                filePreview={filePreview}
-                fileName={fileName}
-                handleReupload={handleReupload}
-                handleUpload={handleUpload}
-                isProcessing={isProcessing}
-                selectedBank={selectedBank}
-                setSelectedBank={setSelectedBank}
+
+          {isProcessing ? (
+            <Processing />
+          ) : showDownloadScreen ? (
+            <DownloadScreen fileName={fileName} />
+          ) : (
+            <>
+              <DragInput
+                isDragActive={isDragActive}
+                getInputProps={getInputProps}
+                getRootProps={getRootProps}
               />
-              {errorMessage && <p>{errorMessage}</p>}
-            </div>
-          </div>
+              <div className="row">
+                <div className="col-12">
+                  <BankSelect
+                    filePreview={filePreview}
+                    fileName={fileName}
+                    handleReupload={handleReupload}
+                    handleUpload={handleUpload}
+                    isProcessing={isProcessing}
+                    selectedBank={selectedBank}
+                    setSelectedBank={setSelectedBank}
+                  />
+                  {errorMessage && <p>{errorMessage}</p>}
+                </div>
+              </div>
 
-          {isNextStepAllowed && (
-            <div className="d-flex justify-content-center mt-4">
-              <Btn text="Next Step" onClick={handleUpload} />
-            </div>
+              {isNextStepAllowed && (
+                <div className="d-flex justify-content-center mt-4">
+                  <Btn text="Next Step" onClick={handleUpload} />
+                </div>
+              )}
+            </>
           )}
-        </>
-      )}
 
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Error Modal"
-        shouldCloseOnOverlayClick={false}
-        className={{
-          base: "modal-appear",
-          afterOpen: "modal-appear-active",
-          beforeClose: "modal-appear",
-        }}
-        style={{
-          overlay: {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            zIndex: 9999,
-          },
-          content: {
-            position: "relative",
-            top: "auto",
-            left: "auto",
-            right: "auto",
-            bottom: "auto",
-            minWidth: "500px",
-            margin: "20px",
-            padding: "0px",
-            backgroundColor: "transparent",
-            border: "none",
-          },
-        }}
-      >
-        <div className="text-white oops-parent">
-          <OppsError onClose={closeModal} />
+          <Modal
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            contentLabel="Error Modal"
+            shouldCloseOnOverlayClick={false}
+            className={{
+              base: "modal-appear",
+              afterOpen: "modal-appear-active",
+              beforeClose: "modal-appear",
+            }}
+            style={{
+              overlay: {
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+                zIndex: 9999,
+              },
+              content: {
+                position: "relative",
+                top: "auto",
+                left: "auto",
+                right: "auto",
+                bottom: "auto",
+                minWidth: "500px",
+                margin: "20px",
+                padding: "0px",
+                backgroundColor: "transparent",
+                border: "none",
+              },
+            }}
+          >
+            <div className="text-white oops-parent">
+              <OppsError onClose={closeModal} />
+            </div>
+          </Modal>
+
+          <CSSTransition
+            in={successModalIsOpen}
+            timeout={300}
+            classNames="modal"
+            unmountOnExit
+          >
+            <Modal
+              isOpen={successModalIsOpen}
+              onRequestClose={closeSuccessModal}
+              contentLabel="Success Modal"
+              style={{
+                overlay: {
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                },
+                content: {
+                  position: "relative",
+                  top: "auto",
+                  left: "auto",
+                  right: "auto",
+                  bottom: "auto",
+                  maxWidth: "400px",
+                  margin: "auto",
+                },
+              }}
+            >
+              <div className="success-container">
+                <i className="fas fa-check-circle"></i>
+                <h2>Success</h2>
+                <p>File uploaded successfully.</p>
+                <button onClick={closeSuccessModal}>Close</button>
+              </div>
+            </Modal>
+          </CSSTransition>
         </div>
-      </Modal>
-
-      <CSSTransition
-        in={successModalIsOpen}
-        timeout={300}
-        classNames="modal"
-        unmountOnExit
-      >
-        <Modal
-          isOpen={successModalIsOpen}
-          onRequestClose={closeSuccessModal}
-          contentLabel="Success Modal"
-          style={{
-            overlay: {
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            },
-            content: {
-              position: "relative",
-              top: "auto",
-              left: "auto",
-              right: "auto",
-              bottom: "auto",
-              maxWidth: "400px",
-              margin: "auto",
-            },
-          }}
-        >
-          <div className="success-container">
-            <i className="fas fa-check-circle"></i>
-            <h2>Success</h2>
-            <p>File uploaded successfully.</p>
-            <button onClick={closeSuccessModal}>Close</button>
-          </div>
-        </Modal>
-      </CSSTransition>
+      </div>
     </div>
   );
 };

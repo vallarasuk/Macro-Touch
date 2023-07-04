@@ -31,7 +31,7 @@ const Processing = () => {
   }, []);
 
   const barStyles = {
-    width: "392px",
+    width: "100%",
     height: "10px",
     flexShrink: 0,
     borderRadius: "10px",
@@ -63,16 +63,15 @@ const Processing = () => {
           "Prepare your coffee to take a sip while going through the report
           ....."
         </p>
-        <div style={barStyles}>
-          <div style={loadingStyles}></div>
+        <div className="progress" style={barStyles}>
+          <div className="progress-bar" style={loadingStyles}></div>
         </div>
-        <div className="">
+        <div className="text-center">
           <div
-            className="percentage"
+            className="percentage fw-bold"
             style={{
               position: "relative",
-              top: "-35px",
-              textAlign: "center",
+              top: "-20px",
               fontWeight: "bold",
               color: "#FFC231",
             }}

@@ -9,9 +9,15 @@ import "./helper_style.css";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
+    setIsMenuOpen(false);
+  };
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -21,8 +27,14 @@ const NavBar = () => {
           <Logo logo_icon={logo_images} />
           <CompanyName name="Macro Touch" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={handleMenuToggle}
+        />
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className={`justify-content-md-end ${isMenuOpen ? "show" : ""}`}
+        >
           <Nav className="mx-auto fw-bold">
             <Nav.Link
               as={Link}

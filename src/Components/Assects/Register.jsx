@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "./Logo";
 import logo_images from "../Images/logomain.svg";
 import CompanyName from "./CompanyName";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Row, Col } from "react-bootstrap";
 import Btn from "./Button";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -70,49 +70,55 @@ const Register = () => {
         <CompanyName name="Macro Touch" />
       </Navbar.Brand>
       <div className="input_content text-center">
-        <div className="mt-md-5 pt-md-5">
-          <h1>Register to get your First Report</h1>
-          <p>Enter your phone number to register yourself and verify the OTP</p>
-        </div>
+        <Row className="mt-md-5 pt-md-5">
+          <Col>
+            <h1>Register to get your First Report</h1>
+            <p>
+              Enter your phone number to register yourself and verify the OTP
+            </p>
+          </Col>
+        </Row>
 
-        <div className="input_section center-input">
-          <div className="input_field my-5">
-            <PhoneInput
-              country={"in"} // Set default country (e.g., India)
-              value={phone}
-              onChange={handlePhoneChange}
-              containerClass="phone-input-container"
-              inputClass="custom-input-class"
-              inputProps={{
-                placeholder: "00000 00000",
-              }}
-            />
-          </div>
-          {!otpSent ? (
-            <div className="input_button">
-              <Btn
-                button_name="Get OTP"
-                className="input_btn"
-                onClick={handleGetOTP}
+        <Row className="input_section center-input">
+          <Col>
+            <div className="input_field my-5">
+              <PhoneInput
+                country={"in"} // Set default country (e.g., India)
+                value={phone}
+                onChange={handlePhoneChange}
+                containerClass="phone-input-container"
+                inputClass="custom-input-class"
+                inputProps={{
+                  placeholder: "00000 00000",
+                }}
               />
             </div>
-          ) : (
-            <div className="input_button">
-              <input
-                type="text"
-                className="input_box"
-                placeholder="Enter OTP"
-                value={otp}
-                onChange={handleOtpChange}
-              />
-              <Btn
-                button_name="Verify OTP"
-                className="input_btn"
-                onClick={handleVerifyOTP}
-              />
-            </div>
-          )}
-        </div>
+            {!otpSent ? (
+              <div className="input_button">
+                <Btn
+                  button_name="Get OTP"
+                  className="input_btn"
+                  onClick={handleGetOTP}
+                />
+              </div>
+            ) : (
+              <div className="input_button">
+                <input
+                  type="text"
+                  className="input_box"
+                  placeholder="Enter OTP"
+                  value={otp}
+                  onChange={handleOtpChange}
+                />
+                <Btn
+                  button_name="Verify OTP"
+                  className="input_btn"
+                  onClick={handleVerifyOTP}
+                />
+              </div>
+            )}
+          </Col>
+        </Row>
       </div>
     </div>
   );

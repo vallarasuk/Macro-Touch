@@ -383,8 +383,9 @@
     border-radius: 5px;
     border: 0.2px solid #0000003a;
     background: #FFFDFD;
-    position: relative; /* Add position relative to the container */
-  }
+    position: relative;
+    /* Add position relative to the container */
+}
 
 .process-content {
     color: #000;
@@ -404,7 +405,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-  }
+}
 
 .download-preview {
     background-image: url(../Images/Vector\ 1.svg);
@@ -422,4 +423,126 @@
     color: #FFF;
     font-size: 14.235px;
     font-weight: 600;
-  }
+}
+
+
+.logo-container {
+    text-align: center;
+}
+
+.logo-image {
+    width: 44px;
+    height: 44px;
+}
+
+.social_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_icon {
+    font-size: 24px;
+    margin: 0 8px;
+}
+
+.success-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.success-parent {
+    background: #fff;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.success-title {
+    margin-top: 30px;
+}
+
+.tick-icon {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 480px) {
+    .logo-image {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    .button_style {
+        /* Add mobile-specific styles here */
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .second_name {
+        /* Add mobile-specific styles here */
+        display: block;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .download-preview {
+        /* Add mobile-specific styles here */
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .preview-text {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .download-btn {
+        /* Add mobile-specific styles here */
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .logo-image {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social_links {
+        flex-direction: column;
+    }
+
+    .social_icon {
+        margin: 8px 0;
+    }
+
+    .success-parent {
+        padding: 10px;
+    }
+
+    .success-title {
+        margin-top: 10px;
+    }
+
+    .back-button {
+        margin-top: 20px;
+    }
+}

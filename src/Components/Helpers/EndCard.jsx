@@ -19,7 +19,7 @@ const EndCard = () => {
             comprehensive view of your bank account.
           </p>
             
-          <Btn button_name="Get Started" link="/get_started"  className="custom_color" />
+          <Btn button_name="Get Started" link="/get_started" className="custom_color" />
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ import Credit from "../Assects/Credit";
 const FileUpload = () => {
   return (
     <div className="container file-section-container">
-      <Credit />
+      <Credit  creditCount="2"/>
       <DragAndDropComponent />
     </div>
   );

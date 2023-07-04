@@ -1,4 +1,3 @@
-// Parent Component
 import React, { useState } from "react";
 import SuccessMessage from "./SuccessMessage";
 
@@ -10,9 +9,15 @@ const ParentComponent = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       {/* Other content */}
-      {successModalIsOpen && <SuccessMessage closeModal={closeSuccessModal} />}
+      <div className="row justify-content-center">
+        <div className="col-sm-8">
+          {successModalIsOpen && (
+            <SuccessMessage closeModal={closeSuccessModal} />
+          )}
+        </div>
+      </div>
     </div>
   );
 };
