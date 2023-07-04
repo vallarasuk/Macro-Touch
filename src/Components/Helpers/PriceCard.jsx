@@ -1,7 +1,8 @@
-import React from "react";
-import Card from "./Card"; // Import the Card component
+import React, { useEffect } from "react";
+import Card from "./Card";
 import "./helper_style.css";
 import NavBarCommon from "./NavBarCommon.jsx";
+import axios from "axios";
 
 const PriceCard = () => {
   const cards = [
@@ -28,6 +29,20 @@ const PriceCard = () => {
     },
   ];
 
+  // const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    fetchCards();
+  }, []);
+
+  const fetchCards = async () => {
+    try {
+      const response = await axios.get("your-backend-api-endpoint");
+      // setCards(response.data);
+    } catch (error) {
+      console.log("Error fetching cards:", error);
+    }
+  };
   return (
     <div className="container">
       <NavBarCommon />

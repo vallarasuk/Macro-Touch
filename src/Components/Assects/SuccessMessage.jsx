@@ -1,16 +1,18 @@
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import "./assect_styles.css"
+import "./assect_styles.css";
 
-const SuccessMessage = ({ closeModal }) => {
+const SuccessMessage = ({ closeModal, downloadStarted }) => {
   const handleCloseModal = () => {
     closeModal(); // Call the close modal function passed from the parent
   };
 
   return (
     <div
-      className="modal fade show d-flex align-items-center justify-content-center success-modal"
+      className={`modal fade show d-flex align-items-center justify-content-center ${
+        downloadStarted ? "success-modal" : "hidden-modal"
+      }`}
       tabIndex="-1"
       role="dialog"
     >

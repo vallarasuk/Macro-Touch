@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./Logo";
 import logo_images from "../Images/logomain.svg";
 import CompanyName from "./CompanyName";
@@ -9,9 +9,12 @@ import "react-phone-input-2/lib/style.css";
 import "./assect_styles.css"; // Your custom CSS file
 
 const Register = () => {
-  const [phone, setPhone] = React.useState("");
-  const [otpSent, setOtpSent] = React.useState(false);
-  const [otp, setOtp] = React.useState("");
+  const [phone, setPhone] = useState("");
+  const [otpSent, setOtpSent] = useState(false);
+  const [otp, setOtp] = useState("");
+  const [profilePicture, setProfilePicture] = useState(null);
+  const [profileName, setProfileName] = useState("");
+  const [profileCreditScore, setProfileCreditScore] = useState("");
 
   const handlePhoneChange = (value) => {
     setPhone(value);
@@ -36,7 +39,16 @@ const Register = () => {
     // Simulate OTP verification via API call
     simulateOTPVerification()
       .then(() => {
-        console.log("OTP verification successful");
+        // Simulate fetching user details from the backend
+        simulateFetchUserDetails()
+          .then((data) => {
+            setProfilePicture(data.profilePicture);
+            setProfileName(data.profileName);
+            setProfileCreditScore(data.profileCreditScore);
+          })
+          .catch((error) => {
+            console.log("Error fetching user details:", error);
+          });
       })
       .catch((error) => {
         console.log("Error verifying OTP:", error);
@@ -59,6 +71,22 @@ const Register = () => {
       setTimeout(() => {
         // Simulate success response
         resolve();
+      }, 1000);
+    });
+  };
+
+  const simulateFetchUserDetails = () => {
+    // Simulate API call delay
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // Simulate success response with user details
+        const data = {
+          profilePicture: "profile-picture-url",
+          profileName: "John Doe",
+          profileCreditScore: 750,
+          // Add other user details
+        };
+        resolve(data);
       }, 1000);
     });
   };
@@ -119,6 +147,22 @@ const Register = () => {
             )}
           </Col>
         </Row>
+
+        {/* Display user details */}
+        {profilePicture && (
+          <div className="user-details">
+            <img
+              src={profilePicture}
+              alt="Profile_Picture"
+              className="profile-picture"
+            />
+            <h2 className="profile-name">{profileName}</h2>
+            <p className="profile-credit-score">
+              Credit Score: {profileCreditScore}
+            </p>
+            {/* Add other user details here */}
+          </div>
+        )}
       </div>
     </div>
   );

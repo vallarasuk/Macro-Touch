@@ -67,20 +67,41 @@ const DragAndDropComponent = () => {
     setSuccessModalIsOpen(false);
   };
 
-  const handleUpload = (value) => {
+  const handleUpload = async () => {
     if (!selectedBank) {
       setErrorMessage("Please select a bank");
       return;
     }
 
-    setIsProcessing(true);
+    // Prepare the data to send to the backend
+    const formData = new FormData();
+    formData.append("file", filePreview);
+    formData.append("fileName", fileName);
+    formData.append("selectedBank", selectedBank.value);
 
-    setTimeout(() => {
-      setIsProcessing(false);
-      setSuccessModalIsOpen(true);
-      setShowDownloadScreen(true);
-      setFileName(fileName);
-    }, 10000);
+    try {
+      setIsProcessing(true);
+
+      // Make an API call to send the data to the backend
+      const response = await fetch("your-backend-upload-api-endpoint", {
+        method: "POST",
+        body: formData,
+      });
+
+      // Handle the response from the backend
+      if (response.ok) {
+        setIsProcessing(false);
+        setSuccessModalIsOpen(true);
+        setShowDownloadScreen(true);
+        setFileName(fileName);
+      } else {
+        // Handle the error response from the backend
+        const errorData = await response.json();
+        console.log("Upload failed:", errorData.message);
+      }
+    } catch (error) {
+      console.log("Error uploading file:", error);
+    }
   };
 
   const uploadStyle = showDownloadScreen ? "text-muted" : "text-dark";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import FilePreview from "./FilePreview";
 import "../Helpers/helper_style.css";
@@ -15,19 +15,25 @@ const BankSelect = ({
   const [amount, setAmount] = useState("");
   const [errorBank, setErrorBank] = useState("");
   const [errorAmount, setErrorAmount] = useState("");
+  const [bankOptions, setBankOptions] = useState([]);
 
-  const bankOptions = [
-    { value: "Axis_Bank", label: "Axis Bank" },
-    { value: "BOI_Bank", label: "BOI Bank" },
-    { value: "HDFC_Bank", label: "HDFC Bank" },
-    { value: "ICICI_Bank", label: "ICICI Bank" },
-    { value: "IDBI_Bank", label: "IDBI Bank" },
-    { value: "INDIAN_Bank", label: "Indian bank" },
-    { value: "KVB_Bank", label: "KVB bank" },
-    { value: "UNION_Bank", label: "Union bank" },
-    { value: "YES_Bank", label: "YES bank" },
-    // Add more options for Indian banks
-  ];
+  useEffect(() => {
+    // Fetch bank options from the backend
+    fetchBankOptions();
+  }, []);
+
+  const fetchBankOptions = async () => {
+    try {
+      // Make an API call to fetch bank options
+      const response = await fetch("your-backend-api-endpoint");
+      const data = await response.json();
+
+      // Update the bank options in the state
+      setBankOptions(data);
+    } catch (error) {
+      console.log("Error fetching bank options:", error);
+    }
+  };
 
   const handleBankChange = (selectedOption) => {
     setSelectedBank(selectedOption);

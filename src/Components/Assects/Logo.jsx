@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Logo = ({ logo_icon, logo_alt_name }) => {
+const Logo = ({ logo_alt_name }) => {
+  const [logoIcon, setLogoIcon] = useState("");
+
+  useEffect(() => {
+    // Make an API call to fetch the logo URL from the backend
+    const fetchLogo = async () => {
+      try {
+        const response = await fetch("your-backend-logo-api-endpoint");
+        if (response.ok) {
+          const data = await response.json();
+          setLogoIcon(data.logoIcon);
+        } else {
+          console.log("Failed to fetch logo");
+        }
+      } catch (error) {
+        console.log("Error fetching logo:", error);
+      }
+    };
+
+    fetchLogo();
+  }, []);
+
   return (
     <div className="logo-container">
-      <img className="logo-image" src={logo_icon} alt={logo_alt_name} />
+      {logoIcon && (
+        <img className="logo-image" src={logoIcon} alt={logo_alt_name} />
+      )}
     </div>
   );
 };
