@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Logo = ({ logo_alt_name }) => {
+const Logo = ({ logo_alt_name,logo_icon }) => {
   const [logoIcon, setLogoIcon] = useState("");
 
   useEffect(() => {
@@ -27,6 +27,8 @@ const Logo = ({ logo_alt_name }) => {
       {logoIcon && (
         <img className="logo-image" src={logoIcon} alt={logo_alt_name} />
       )}
+        <img className="logo-image" src={logo_icon} alt={logo_alt_name} />
+
     </div>
   );
 };

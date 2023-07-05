@@ -1,56 +1,73 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import userIcon from "../Images/usericon.svg";
 import tickStar from "../Images/ticketstar.svg";
 import "./helper_style.css";
+import Modal from "react-modal";
+import ProfileInfo from "./ProfileInfo";
 
 const UserProfile = () => {
-  const [userData, setUserData] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const modalRef = useRef(null);
 
-  useEffect(() => {
-    // Fetch user profile data from the backend
-    fetchUserData();
-  }, []);
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
 
-  const fetchUserData = async () => {
-    try {
-      // Make an API call to fetch user profile data
-      const response = await fetch("your-backend-api-endpoint");
-      const data = await response.json();
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
-      // Update the user profile data in the state
-      setUserData(data);
-    } catch (error) {
-      console.log("Error fetching user profile data:", error);
+  const handleClickOutsideModal = (event) => {
+    if (
+      modalRef.current &&
+      !modalRef.current.contains(event.target) &&
+      !event.target.classList.contains("user-icon") &&
+      !event.target.classList.contains("count_icon") &&
+      !event.target.classList.contains("card")
+    ) {
+      closeModal();
     }
   };
 
-  const handleProfileClick = () => {
-    // Open the user's profile with the necessary information
-    // You can implement your logic to open the profile here
-    console.log("Opening user profile:", userData);
-  };
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutsideModal);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsideModal);
+    };
+  }, []);
 
   return (
-    <div
-      className="d-flex justify-content-center align-items-center"
-      onClick={handleProfileClick}
-      style={{ cursor: "pointer" }}
-    >
-      {userData && (
-        <>
-          <div className="credit p-1">
-            <div className="d-flex align-items-center">
-              <img className="count_icon" src={tickStar} alt="counting icon" />
-              <strong className="fw-bold h4 ms-3">
-                {userData.creditCount}
-              </strong>
-            </div>
+    <div>
+      <div
+        className={`d-flex justify-content-center align-items-center ${
+          modalIsOpen ? "popup-open" : ""
+        }`}
+        style={{ cursor: "pointer" }}
+        onClick={openModal}
+      >
+        <div className="credit p-1">
+          <div className="d-flex align-items-center">
+            <img className="count_icon" src={tickStar} alt="counting icon" />
+            <strong className="fw-bold h4 ms-3">02</strong>
           </div>
-          <div className="user-icon mx-3">
-            <img src={userIcon} alt="User Profile" />
-          </div>
-        </>
-      )}
+        </div>
+        <div className="user-icon mx-3">
+          <img src={userIcon} alt="User Profile" />
+        </div>
+      </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="User Profile Modal"
+        className="user-profile-modal"
+        overlayClassName="user-profile-overlay"
+        closeTimeoutMS={300}
+        shouldCloseOnOverlayClick={false} // Disable close on overlay click
+      >
+        <div className={`user-profile-modal-content`} ref={modalRef}>
+          <ProfileInfo closeModal={closeModal} />
+        </div>
+      </Modal>
     </div>
   );
 };

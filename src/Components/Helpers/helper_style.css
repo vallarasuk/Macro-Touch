@@ -1,3 +1,45 @@
+/* Media Queries */
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+  .home_section {
+    height: auto;
+  }
+
+  .get_start_btn_name {
+    width: 100%;
+  }
+
+  .why_section h2 {
+    font-size: 24px;
+  }
+
+  .why_section p {
+    font-size: 14px;
+  }
+
+  .why_section h1 {
+    font-size: 36px;
+  }
+
+  .how_section h1 {
+    font-size: 36px;
+  }
+
+  .how_section h2 {
+    font-size: 24px;
+  }
+
+  .how_section p {
+    font-size: 14px;
+  }
+
+  .how_section button {
+    font-size: 16px;
+  }
+}
+
+
 .active-link {
   position: relative;
 }
@@ -452,4 +494,118 @@ ul>li {
 
 .file-section-container {
   max-width: 800px;
+}
+
+.popup-open .user-icon {
+  animation: popup 0.3s ease-in-out;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.user-profile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.user-profile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+}
+
+.user-profile-modal-content {
+  /* Other styles */
+  width: 40%;
+  height: 100%;
+  background-color: transparent;
+  animation: slide-in 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-out {
+  transform: translateX(100%);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .user-profile-modal-content {
+    width: 100%;
+  }
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+}
+
+
+.card {
+  position: relative;
+  padding: 20px;
+  margin: auto;
+  border-radius: 8px;
+  /* background-color: #fff; */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.popup-open .card {
+  animation: popup 0.3s ease-in-out;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popup-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trans-image {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
 }
