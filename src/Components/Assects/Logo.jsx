@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logoicon from "../Images/logomain.svg"
 
 const Logo = ({ logo_alt_name, logo_icon }) => {
   const [logoIcon, setLogoIcon] = useState("");
@@ -24,11 +25,11 @@ const Logo = ({ logo_alt_name, logo_icon }) => {
 
   return (
     <div className="logo-container">
-      {logoIcon && (
-        <img className="logo-image" src={logoIcon} alt={logo_alt_name} />
+      {logoicon && (
+        <img className="logo-image" src={logoicon} alt={logo_alt_name} />
       )}
-      {!logoIcon && (
-        <img className="logo-image" src={logo_icon} alt={logo_alt_name} />
+      {!logoicon && (
+        <img className="logo-image" src={logoicon} alt={logo_alt_name} />
       )}
     </div>
   );

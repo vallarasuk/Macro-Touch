@@ -22,7 +22,7 @@ const Register = () => {
   const handleGetOTP = () => {
     // Send the phone number to the server to get OTP
     axios
-      .post("/api/sendOTP", { phoneNumber: phone })
+      .post("http://localhost:5000/api/sendOTP", { phoneNumber: phone })
       .then(() => {
         setOtpSent(true);
       })
@@ -89,9 +89,9 @@ const Register = () => {
           </Col>
         </Row>
 
-        <Row className="input_section center-input">
+        <Row className="input_section d-inline-block text-center">
           <Col>
-            <div className="input_field my-5">
+            <div className="input_field  d-inline-bock my-5">
               <PhoneInput
                 country={"in"} // Set default country (e.g., India)
                 value={phone}
