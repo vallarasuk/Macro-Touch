@@ -1,8 +1,8 @@
 import React from "react";
 import uploadVector from "../Images/uploadVector.svg";
-import processVector from "../Images/processVector.png";
-import downloadVector from "../Images/downloadVector.png";
-import arrowIcon from "../Images/Arrow1.svg";
+import processVector from "../Images/processVecotr.png";
+import downloadVector from "../Images/downlaodvector.png";
+import arrowIcon from "../Images/Arrow 1.svg";
 
 const FileSectionProcess = ({ uploadStyle, processStyle, downloadStyle }) => {
   return (
