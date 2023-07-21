@@ -1,6 +1,6 @@
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./assect_styles.css";
 
 const SuccessMessage = ({ closeModal, downloadStarted }) => {
@@ -26,7 +26,11 @@ const SuccessMessage = ({ closeModal, downloadStarted }) => {
                 className="tick-icon rounded-circle text-white"
               />
               <h1>Feel the veracity</h1>
-              <p>Your download has started</p>
+              {downloadStarted ? (
+                <p>Your download is complete!</p>
+              ) : (
+                <p>Your download will start shortly.</p>
+              )}
               <button className="back-button" onClick={handleCloseModal}>
                 Back
               </button>

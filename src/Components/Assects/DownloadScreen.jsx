@@ -6,7 +6,9 @@ const DownloadScreen = ({ userId }) => {
   const fetchData = async () => {
     try {
       // Make an API call to fetch backend data for the user
-      const response = await fetch(`your-backend-api-endpoint/${userId}`);
+      const response = await fetch(
+        `https://your-backend-api.com/users/${userId}`
+      );
       const data = await response.json();
 
       // Set the fetched data in the state
@@ -20,7 +22,14 @@ const DownloadScreen = ({ userId }) => {
     try {
       // Make an API call to fetch the report file for the user
       const response = await fetch(
-        `your-backend-report-api-endpoint/${userId}`
+        `https://your-backend-api.com/reports/${userId}`,
+        {
+          method: "GET",
+          headers: {
+            // Add any required headers, such as authentication tokens
+            // if your backend requires them for downloading the report.
+          },
+        }
       );
       const blob = await response.blob();
 
@@ -48,7 +57,12 @@ const DownloadScreen = ({ userId }) => {
       <div className="my-5">
         {/* Display backend data */}
         {backendData && (
-          <div>{/* Render the backend data in your desired format */}</div>
+          <div>
+            {/* Render the backend data in your desired format */}
+            {/* For example: */}
+            <h1>{backendData.name}</h1>
+            <p>{backendData.email}</p>
+          </div>
         )}
 
         <div className="download-preview">

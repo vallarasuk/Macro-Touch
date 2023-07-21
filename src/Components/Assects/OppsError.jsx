@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import OppsErrorImage from "../Images/oops error.svg";
 
-const OppsError = ({ onClose }) => {
+const OopsError = ({ onClose }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   const handleTryAgain = () => {
@@ -30,4 +30,4 @@ const OppsError = ({ onClose }) => {
   );
 };
 
-export default OppsError;
+export default OopsError;

@@ -7,20 +7,21 @@ const FilePreview = ({
   handleUpload,
   isProcessing,
 }) => {
+  const isImagePreview = filePreview && filePreview.startsWith("data:image");
+
   return (
     <div>
       <span className="py-5" style={{ fontSize: "18px" }}>
         File Preview: <strong>{fileName}</strong>
       </span>
-      {filePreview.startsWith("data:image") ? (
+      {isImagePreview ? (
         <img
           src={filePreview}
           alt="File Preview"
           style={{ maxWidth: "100%", height: "auto" }}
         />
       ) : (
-        <></>
-        // <p>{filePreview}</p> to preview the file
+        filePreview && <p>{filePreview}</p>
       )}
       {!isProcessing && (
         <div

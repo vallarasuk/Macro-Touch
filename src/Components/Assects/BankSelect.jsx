@@ -24,7 +24,7 @@ const BankSelect = ({
 
   const fetchBankOptions = async () => {
     try {
-      // Make an API call to fetch bank options
+      // Make an API call to fetch bank options from your backend
       const response = await fetch("your-backend-api-endpoint");
       const data = await response.json();
 
@@ -42,7 +42,7 @@ const BankSelect = ({
 
   const handleAmountChange = (event) => {
     setAmount(event.target.value);
-    setErrorBank("");
+    setErrorAmount("");
   };
 
   const handleValidate = () => {

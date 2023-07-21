@@ -98,9 +98,11 @@ const DragAndDropComponent = () => {
         // Handle the error response from the backend
         const errorData = await response.json();
         console.log("Upload failed:", errorData.message);
+        setIsProcessing(false); // Reset processing state in case of an error
       }
     } catch (error) {
       console.log("Error uploading file:", error);
+      setIsProcessing(false); // Reset processing state in case of an error
     }
   };
 

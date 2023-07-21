@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Logo from "./Logo";
-import logo_images from "../Images/logomain.svg";
 import CompanyName from "./CompanyName";
 import { Navbar, Row, Col } from "react-bootstrap";
 import Btn from "./Button";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import "./assect_styles.css"; // Your custom CSS file
+import axios from "axios";
 
 const Register = () => {
   const [phone, setPhone] = useState("");
@@ -21,8 +20,9 @@ const Register = () => {
   };
 
   const handleGetOTP = () => {
-    // Simulate sending OTP via API call
-    simulateOTPSending()
+    // Send the phone number to the server to get OTP
+    axios
+      .post("/api/sendOTP", { phoneNumber: phone })
       .then(() => {
         setOtpSent(true);
       })
@@ -36,8 +36,9 @@ const Register = () => {
   };
 
   const handleVerifyOTP = () => {
-    // Simulate OTP verification via API call
-    simulateOTPVerification()
+    // Send the OTP to the server for verification
+    axios
+      .post("/api/verifyOTP", { otp })
       .then(() => {
         // Simulate fetching user details from the backend
         simulateFetchUserDetails()
@@ -55,26 +56,7 @@ const Register = () => {
       });
   };
 
-  const simulateOTPSending = () => {
-    // Simulate API call delay
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // Simulate success response
-        resolve();
-      }, 1000);
-    });
-  };
-
-  const simulateOTPVerification = () => {
-    // Simulate API call delay
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // Simulate success response
-        resolve();
-      }, 1000);
-    });
-  };
-
+  // Function to simulate fetching user details from the backend
   const simulateFetchUserDetails = () => {
     // Simulate API call delay
     return new Promise((resolve, reject) => {
@@ -94,7 +76,7 @@ const Register = () => {
   return (
     <div className="register_section p-3">
       <Navbar.Brand href="#home" className="d-flex align-items-center">
-        <Logo logo_icon={logo_images} />
+        <Logo />
         <CompanyName name="Macro Touch" />
       </Navbar.Brand>
       <div className="input_content text-center">
@@ -160,7 +142,6 @@ const Register = () => {
             <p className="profile-credit-score">
               Credit Score: {profileCreditScore}
             </p>
-            {/* Add other user details here */}
           </div>
         )}
       </div>

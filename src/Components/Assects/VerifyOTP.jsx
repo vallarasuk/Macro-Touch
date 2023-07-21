@@ -6,11 +6,13 @@ import CompanyName from "./CompanyName";
 import logo_images from "../Images/logomain.svg";
 import Btn from "./Button";
 import "./VerifyOTP.css"; // Your custom CSS file
+import axios from "axios";
 
 const VerifyOTP = () => {
   const inputRefs = useRef([]);
   const [isVerified, setIsVerified] = useState(false);
   const [timer, setTimer] = useState(30);
+  const [otp, setOTP] = useState("");
 
   useEffect(() => {
     let interval;
@@ -45,6 +47,13 @@ const VerifyOTP = () => {
 
     // Update the input value with the validated number-only value
     e.target.value = value;
+
+    // Join the OTP digits to form the complete OTP
+    const otpValue = inputRefs.current
+      .map((ref) => ref.value)
+      .join("")
+      .trim();
+    setOTP(otpValue);
   };
 
   const handleKeyDown = (e, index) => {
@@ -55,12 +64,28 @@ const VerifyOTP = () => {
   };
 
   const handleVerifyClick = () => {
-    setIsVerified(true);
+    // Send the OTP to the server for verification
+    axios
+      .post("/api/verifyOTP", { otp })
+      .then(() => {
+        setIsVerified(true);
+      })
+      .catch((error) => {
+        console.log("Error verifying OTP:", error);
+      });
   };
 
   const handleResendClick = () => {
-    setIsVerified(false);
-    setTimer(30);
+    // Resend the OTP
+    axios
+      .post("/api/resendOTP")
+      .then(() => {
+        setIsVerified(false);
+        setTimer(30);
+      })
+      .catch((error) => {
+        console.log("Error resending OTP:", error);
+      });
   };
 
   return (
