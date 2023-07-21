@@ -90,7 +90,7 @@ const VerifyOTP = () => {
 
   return (
     <div className="verify_section p-3">
-      <Navbar.Brand href="#home" className="d-flex align-items-center">
+      <Navbar.Brand href="/" className="d-flex align-items-center">
         <Logo logo_icon={logo_images} />
         <CompanyName name="Macro Touch" />
       </Navbar.Brand>

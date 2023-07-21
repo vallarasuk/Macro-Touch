@@ -34,12 +34,12 @@ const App = () => {
       <div>
         <Routes>
           <Route path="/get_started" element={<Register />} index />
-          <Route path="/login" element={<Login />} />
+          <Route path="/get_started" element={<Login />} />
           <Route path="/" element={<HomeSection />} />
           <Route path="/price" element={<PricingSection />} />
           <Route path="/files" element={<FileSection />} />
         </Routes>
-        {showInstructionModal && (
+        {!showInstructionModal && (
           <InstructionModal onClose={handleInstructionModalClose} />
         )}
       </div>
