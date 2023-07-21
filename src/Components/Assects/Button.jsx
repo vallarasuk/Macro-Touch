@@ -5,14 +5,14 @@ import "./assect_styles.css";
 const Btn = ({ button_name, className, link }) => {
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleLoginClick = () => {
     navigate(link);
   };
 
   return (
     <button
       className={`${className} px-4 fw-bold text-capitalize button_style`}
-      onClick={handleClick} // Call handleClick function on click
+      onClick={handleLoginClick} // Call handleLoginClick function on click
     >
       {button_name}
     </button>

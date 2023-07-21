@@ -76,7 +76,7 @@ const VerifyOTP = () => {
   };
 
   const handleResendClick = () => {
-    // Resend the OTP
+    // Resend the OTP by making an API request to the backend
     axios
       .post("/api/resendOTP")
       .then(() => {

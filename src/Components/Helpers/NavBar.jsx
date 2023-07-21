@@ -106,7 +106,7 @@ const NavBar = () => {
             <Btn
               className="px-4"
               button_name="Log In"
-              onClick={handleLoginClick} // Call handleLoginClick function on click
+              onClick={handleLoginClick(loggedIn)} // Call handleLoginClick function on click
             />
           </Nav>
         </Navbar.Collapse>

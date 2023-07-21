@@ -6,6 +6,7 @@ import Btn from "./Button";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [phone, setPhone] = useState("");
@@ -19,12 +20,17 @@ const Register = () => {
     setPhone(value);
   };
 
+  const navigate = useNavigate(); // Use useNavigate hook for programmatic navigation
+
   const handleGetOTP = () => {
     // Send the phone number to the server to get OTP
     axios
       .post("http://localhost:5000/api/sendOTP", { phoneNumber: phone })
       .then(() => {
         setOtpSent(true);
+
+        // Redirect to the VerifyOTP page after OTP is sent
+        navigate("/verify-otp");
       })
       .catch((error) => {
         console.log("Error sending OTP:", error);
@@ -75,7 +81,7 @@ const Register = () => {
 
   return (
     <div className="register_section p-3">
-      <Navbar.Brand href="#home" className="d-flex align-items-center">
+      <Navbar.Brand href="/" className="d-flex align-items-center">
         <Logo />
         <CompanyName name="Macro Touch" />
       </Navbar.Brand>

@@ -81,18 +81,10 @@ const Footer = () => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        <FaMapMarkerAlt className="icon me-2" /> 232, Salem
-                        Main Road,
+                        <FaMapMarkerAlt className="icon me-2" /> 232, Salem Main
+                        Road,
                         <br /> Chinnasalem
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                      </a> </p> </div> </div> </div> </div> </div> </div> </div>
       <FooterBar />
     </>
   );

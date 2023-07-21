@@ -38,7 +38,7 @@ const Login = () => {
         console.log("Login successful:", response.data);
 
         // Use the navigate function to redirect the user to the dashboard or home page after successful login
-        navigate("/dashboard"); // Replace "/dashboard" with the actual path to your dashboard page
+        navigate("/files"); // Replace "/dashboard" with the actual path to your dashboard page
       })
       .catch((error) => {
         setError("Invalid OTP. Please try again.");

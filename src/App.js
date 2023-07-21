@@ -10,6 +10,7 @@ import './Components/Helpers/helper_style.css';
 import FileSection from './Components/Section/FileSection';
 import HomeSection from './Components/Section/HomeSection';
 import PricingSection from './Components/Section/PriceSection';
+import VerifyOTP from './Components/Assects/VerifyOTP';
 
 const App = () => {
   const [showInstructionModal, setShowInstructionModal] = useState(true);
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/" element={<HomeSection />} />
           <Route path="/price" element={<PricingSection />} />
           <Route path="/files" element={<FileSection />} />
+          <Route path="/verify" element={<VerifyOTP />} />
         </Routes>
         {!showInstructionModal && (
           <InstructionModal onClose={handleInstructionModalClose} />
