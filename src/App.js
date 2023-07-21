@@ -11,6 +11,7 @@ import FileSection from './Components/Section/FileSection';
 import HomeSection from './Components/Section/HomeSection';
 import PricingSection from './Components/Section/PriceSection';
 import VerifyOTP from './Components/Assects/VerifyOTP';
+import UserDetail from './Components/Helpers/UserDetail';
 
 const App = () => {
   const [showInstructionModal, setShowInstructionModal] = useState(true);
@@ -35,11 +36,12 @@ const App = () => {
       <div>
         <Routes>
           <Route path="/get_started" element={<Register />} index />
-          <Route path="/get_started" element={<Login />} />
+          {/* <Route path="/get_started" element={<Login />} /> */}
           <Route path="/" element={<HomeSection />} />
           <Route path="/price" element={<PricingSection />} />
           <Route path="/files" element={<FileSection />} />
           <Route path="/verify" element={<VerifyOTP />} />
+          <Route path="/detail" element={<UserDetail />} />
         </Routes>
         {!showInstructionModal && (
           <InstructionModal onClose={handleInstructionModalClose} />

@@ -411,7 +411,7 @@ ul>li {
 
 .card img {
   /* display: flex; */
-  width: 163.193px;
+  width: 143.193px;
   height: 148.578px;
   padding: 28.027px 32.956px 27.008px 33.595px;
   justify-content: center;
@@ -466,6 +466,8 @@ ul>li {
 .card {
   border-left: none;
   border-right: none;
+  margin: 0;
+  padding: 0;
 }
 
 .vector_img {
@@ -563,11 +565,35 @@ ul>li {
 
 .profile-info {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: start;
   height: 100vh;
 }
 
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-section img {
+  margin-right: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+
+
+@media (max-width: 768px) {
+  .profile-info {
+    padding: 10px;
+  }
+
+  /* Make the card sections stack vertically */
+  .card.profile > div {
+    margin-bottom: 20px;
+  }
+}
 
 .card {
   position: relative;
@@ -608,4 +634,8 @@ ul>li {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
+}
+
+.profile{
+  height: 80vh;
 }
