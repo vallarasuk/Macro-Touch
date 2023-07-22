@@ -639,3 +639,20 @@ ul>li {
 .profile{
   height: 80vh;
 }
+
+.logout-button{
+  /* display: inline-flex; */
+padding: 15px 21px;
+gap: 10px;
+border-radius: 8px;
+background: var(--primary, #FFC231);
+}
+
+.logout-button{
+/* font-family: Poppins; */
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+color: #7201C2;;
+}

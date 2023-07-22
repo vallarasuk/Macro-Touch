@@ -2,39 +2,38 @@
 import React from "react";
 import Modal from "react-modal";
 import defaultIcon from "../Images/gg_profile.png";
+import TransactionIcon from "../Images/uil_transaction.png";
+import { Link } from "react-router-dom";
+
 
 const ProfileModal = ({ isOpen, onRequestClose, profileImage }) => {
   return (
-    <Modal
-      isOpen={isOpen}
-      onRequestClose={onRequestClose}
-      className=""
-      overlayClassName="profile-modal-overlay"
-      contentLabel="Profile Modal"
-    >
-      {/* Display the user's profile image or the default icon in the modal */}
-      {profileImage ? (
-        <img src={profileImage} alt="User Profile" className="profile-modal-image" />
-      ) : (
-        <img src={defaultIcon} alt="Default Icon" className="profile-modal-image" />
-      )}
-
-      {/* Content for the modal */}
-      <div className="modal-content">
-        <div className="modal-card">
-          <h2>Reports</h2>
-          {/* Add content for the Reports card */}
-        </div>
-        <div className="modal-card">
-          <h2>Transaction Details</h2>
-          {/* Add content for the Transaction Details card */}
-        </div>
+    
+    <div className="profile-info">
+    <div className="card profile">
+      <div className="profile-section d-flex">
+        {/* Use Link for navigation */}
+        <Link
+          className="d-flex align-items-center"
+          // to="/detail"
+          // onClick={handleOpenModal}
+        >
+          {/* Display the user's profile image or the default icon */}
+          {profileImage ? (
+            <img src={profileImage} alt="User Profile" className="profile-image" />
+          ) : (
+            <img src={defaultIcon} alt="Default Icon" className="profile-image" />
+          )}
+          <h3 className="text-decoration-underline ms-3">Your Profile</h3>
+        </Link>
       </div>
 
-      <button className="close-modal-btn" onClick={onRequestClose}>
-        Close Modal
-      </button>
-    </Modal>
+      <div className="profile-section d-flex align-items-center">
+        <img src={TransactionIcon} alt="Transaction icon" className="trans-image" />
+        <h3 className="text-decoration-underline ms-3">Transaction History</h3>
+      </div>
+    </div>
+  </div>
   );
 };
 
