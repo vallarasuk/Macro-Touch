@@ -590,7 +590,7 @@ ul>li {
   }
 
   /* Make the card sections stack vertically */
-  .card.profile > div {
+  .card.profile>div {
     margin-bottom: 20px;
   }
 }
@@ -636,23 +636,49 @@ ul>li {
   flex-shrink: 0;
 }
 
-.profile{
+.profile {
   height: 80vh;
 }
 
-.logout-button{
+.logout-button {
   /* display: inline-flex; */
-padding: 15px 21px;
-gap: 10px;
-border-radius: 8px;
-background: var(--primary, #FFC231);
+  padding: 15px 21px;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--primary, #FFC231);
 }
 
-.logout-button{
-/* font-family: Poppins; */
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-color: #7201C2;;
+.logout-button {
+  /* font-family: Poppins; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #7201C2;
+  ;
 }
+
+/* helper_style.css */
+/* Add a slow sliding animation from right to left for the modal */
+.profile-info-modal-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.profile-info-modal-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 500ms, transform 800ms;
+}
+
+.profile-info-modal-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.profile-info-modal-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 500ms, transform 800ms;
+}
+

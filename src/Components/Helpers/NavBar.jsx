@@ -43,7 +43,7 @@ const NavBar = () => {
     // Check if the user is registered based on the loggedIn state
     if (loggedIn) {
       // User is registered, redirect to the login page
-      navigate("/login");
+      navigate("/get_started");
     } else {
       // User is not registered, redirect to the register page
       navigate("/get_started");

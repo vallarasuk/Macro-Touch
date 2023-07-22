@@ -8,10 +8,12 @@ import "./helper_style.css";
 import TransactionIcon from "../Images/uil_transaction.png";
 import defaultIcon from "../Images/gg_profile.png";
 import Btn from "../Assects/Button";
+import { CSSTransition } from "react-transition-group";
 
 const ProfileInfo = () => {
   const [profileImage, setProfileImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [userDetails, setUserDetails] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,7 +21,9 @@ const ProfileInfo = () => {
     axios
       .get("/api/userDetails") // Replace this with the appropriate API endpoint
       .then((response) => {
-        const userImage = response.data.profileImage;
+        const userData = response.data;
+        setUserDetails(userData); // Save the user details in state
+        const userImage = userData.profileImage;
         if (userImage) {
           // If the user has a profile image, set it in the state
           setProfileImage(userImage);
@@ -34,7 +38,21 @@ const ProfileInfo = () => {
   }, []);
 
   const handleOpenModal = () => {
-    setIsModalOpen(true);
+    // Check user login from backend before opening the modal
+    axios
+      .get("/api/checkLogin") // Replace this with the appropriate API endpoint for checking user login
+      .then((response) => {
+        const isLoggedIn = response.data.isLoggedIn;
+        if (isLoggedIn) {
+          setIsModalOpen(true); // Open the modal with user details
+        } else {
+          // Redirect to the login page if not logged in
+          navigate("/login");
+        }
+      })
+      .catch((error) => {
+        console.log("Error checking user login:", error);
+      });
   };
 
   const handleCloseModal = () => {
@@ -53,38 +71,50 @@ const ProfileInfo = () => {
       <div className="card profile">
         <div className="profile-section d-flex">
           {/* Use Link for navigation */}
-          <Link
-            className="d-flex align-items-center"
-            onClick={handleOpenModal}
-          >
+          <Link className="d-flex align-items-center" onClick={handleOpenModal}>
             {/* Display the user's profile image or the default icon */}
             {profileImage ? (
-              <img src={profileImage} alt="User Profile" className="profile-image" />
+              <img
+                src={profileImage}
+                alt="User Profile"
+                className="profile-image"
+              />
             ) : (
-              <img src={defaultIcon} alt="Default Icon" className="profile-image" />
+              <img
+                src={defaultIcon}
+                alt="Default Icon"
+                className="profile-image"
+              />
             )}
             <h3 className="text-decoration-underline ms-3">Your Profile</h3>
           </Link>
         </div>
 
         <div className="profile-section d-flex align-items-center">
-          <img src={TransactionIcon} alt="Transaction icon" className="trans-image" />
-          <h3 className="text-decoration-underline ms-3">Transaction History</h3>
+          <img
+            src={TransactionIcon}
+            alt="Transaction icon"
+            className="trans-image"
+          />
+          <h3 className="text-decoration-underline ms-3">
+            Transaction History
+          </h3>
         </div>
         {/* Logout Button */}
-      <button onClick={handleLogout} className="logout-button">
-        Logout
-      </button>
+        <button onClick={handleLogout} className="logout-button">
+          Logout
+        </button>
       </div>
 
-      
-
-      {/* Profile Modal */}
-      {/* <ProfileModal
-        isOpen={isModalOpen}
-        onRequestClose={handleCloseModal}
-        profileImage={profileImage}
-      /> */}
+      {/* User Detail Modal */}
+      <CSSTransition
+        in={isModalOpen}
+        timeout={800}
+        classNames="profile-info-modal"
+        unmountOnExit
+      >
+        <ProfileModal closeModal={handleCloseModal} userDetails={userDetails} />
+      </CSSTransition>
     </div>
   );
 };
