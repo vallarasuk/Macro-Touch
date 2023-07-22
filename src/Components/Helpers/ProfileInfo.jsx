@@ -12,7 +12,7 @@ import { CSSTransition } from "react-transition-group";
 
 const ProfileInfo = () => {
   const [profileImage, setProfileImage] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
   const [userDetails, setUserDetails] = useState({});
   const navigate = useNavigate();
 
@@ -46,8 +46,8 @@ const ProfileInfo = () => {
         if (isLoggedIn) {
           setIsModalOpen(true); // Open the modal with user details
         } else {
-          // Redirect to the login page if not logged in
-          navigate("/login");
+          // Redirect to the register page if not logged in
+          navigate("/get_started");
         }
       })
       .catch((error) => {
